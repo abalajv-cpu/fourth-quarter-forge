@@ -141,18 +141,24 @@ const Home = () => {
               </div>
               <div className="space-y-4">
                 {[
-                  "Athlete & Engineer",
-                  "NCAA-Certified AAU Coach",
-                  "29-Year Fortune 500 Executive",
-                  "Hall of Fame Team Member",
-                  "Triple-Certified: DISC, Indigo, EQ",
+                  { label: "Athlete & Engineer", color: "text-primary" },
+                  { label: "NCAA-Certified AAU Coach", color: "text-primary" },
+                  { label: "29-Year Fortune 500 Executive", color: "text-primary" },
+                  { label: "Hall of Fame Team Member", color: "text-primary" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-4 rounded-sm bg-secondary/30 border border-border">
-                    <Award size={18} className="text-primary shrink-0" />
-                    <span className="text-sm font-medium">{item}</span>
+                    <Award size={18} className={`${item.color} shrink-0`} />
+                    <span className="text-sm font-medium">{item.label}</span>
                   </div>
                 ))}
-              </div>
+                <div className="flex items-center gap-3 p-4 rounded-sm bg-secondary/30 border border-border">
+                  <span className="text-sm font-medium">Triple-Certified:</span>
+                  <div className="flex gap-2">
+                    <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-disc">DISC</span>
+                    <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-indigo">Indigo</span>
+                    <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-eq">EQ</span>
+                  </div>
+                </div>
             </div>
           </AnimatedSection>
         </div>
