@@ -82,7 +82,18 @@ const Services = () => (
                       </span>
                     )}
                     <h3 className="font-display text-2xl font-bold">{s.title}</h3>
-                    <span className="text-sm text-muted-foreground">{s.assessments}</span>
+                    <div className="flex gap-2 mt-1">
+                      {s.assessments.split(" + ").map((a) => (
+                        <span
+                          key={a}
+                          className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-sm text-white ${
+                            a === "DISC" ? "bg-brand-disc" : a === "Indigo" ? "bg-brand-indigo" : "bg-brand-eq"
+                          }`}
+                        >
+                          {a}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <span className="text-lg font-semibold text-primary whitespace-nowrap">{s.price}</span>
                 </div>
