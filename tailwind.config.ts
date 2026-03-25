@@ -64,6 +64,9 @@ export default {
         cream: "hsl(var(--cream))",
         "gray-light": "hsl(var(--gray-light))",
         "gray-section": "hsl(var(--gray-section))",
+        "brand-disc": "hsl(var(--brand-disc))",
+        "brand-indigo": "hsl(var(--brand-indigo))",
+        "brand-eq": "hsl(var(--brand-eq))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
