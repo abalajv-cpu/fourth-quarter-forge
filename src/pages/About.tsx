@@ -39,17 +39,17 @@ const About = () => {
               </div>
               <div className="md:col-span-2 space-y-4">
                 {[
-                  "Athlete & Engineer",
-                  "NCAA-Certified AAU Coach",
-                  "29-Year Fortune 500 Executive",
-                  "Hall of Fame Team Member",
-                  "DISC Certified",
-                  "Indigo Certified",
-                  "EQ Certified",
+                  { label: "Athlete & Engineer", color: "text-primary" },
+                  { label: "NCAA-Certified AAU Coach", color: "text-primary" },
+                  { label: "29-Year Fortune 500 Executive", color: "text-primary" },
+                  { label: "Hall of Fame Team Member", color: "text-primary" },
+                  { label: "DISC Certified", color: "text-brand-disc" },
+                  { label: "Indigo Certified", color: "text-brand-indigo" },
+                  { label: "EQ Certified", color: "text-brand-eq" },
                 ].map((c, i) => (
                   <div key={i} className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border">
-                    <Award size={16} className="text-primary shrink-0" />
-                    <span className="text-sm font-medium">{c}</span>
+                    <Award size={16} className={`${c.color} shrink-0`} />
+                    <span className="text-sm font-medium">{c.label}</span>
                   </div>
                 ))}
               </div>
