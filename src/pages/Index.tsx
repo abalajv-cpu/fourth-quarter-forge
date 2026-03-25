@@ -159,6 +159,7 @@ const Home = () => {
                     <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-eq">EQ</span>
                   </div>
                 </div>
+              </div>
             </div>
           </AnimatedSection>
         </div>
