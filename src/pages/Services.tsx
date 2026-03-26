@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
+import coachingSession from "@/assets/coaching-session.jpg";
 
 const services = [
   {
@@ -60,8 +61,11 @@ const services = [
 
 const Services = () => (
   <main className="pt-20">
-    <section className="py-24 md:py-32">
-      <div className="container mx-auto px-6">
+    {/* Hero with image */}
+    <section className="relative py-24 md:py-32 overflow-hidden">
+      <img src={coachingSession} alt="" loading="lazy" width={1280} height={720} className="absolute inset-0 w-full h-full object-cover opacity-15" />
+      <div className="absolute inset-0 bg-background/85" />
+      <div className="relative z-10 container mx-auto px-6">
         <AnimatedSection>
           <SectionHeading
             label="Services"
@@ -69,7 +73,11 @@ const Services = () => (
             description="Scientifically validated assessments combined with elite consulting experience. Choose the program that fits your team's needs."
           />
         </AnimatedSection>
+      </div>
+    </section>
 
+    <section className="py-16 md:py-24">
+      <div className="container mx-auto px-6">
         <div className="space-y-8 max-w-4xl mx-auto">
           {services.map((s, i) => (
             <AnimatedSection key={i} delay={i * 0.1}>

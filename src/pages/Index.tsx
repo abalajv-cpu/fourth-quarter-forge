@@ -4,6 +4,10 @@ import { ArrowRight, Target, Users, Brain, TrendingUp, Shield, Award, Lightbulb,
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import heroBg from "@/assets/hero-bg.jpg";
+import teamHuddle from "@/assets/team-huddle.jpg";
+import founderPortrait from "@/assets/founder-portrait.jpg";
+import performanceAbstract from "@/assets/performance-abstract.jpg";
+import athleteFocus from "@/assets/athlete-focus.jpg";
 
 const Home = () => {
   return (
@@ -69,24 +73,32 @@ const Home = () => {
               description="Teams invest heavily in physical training and tactical preparation — but the human side of performance is often overlooked."
             />
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <AnimatedSection delay={0.1}>
-              <div className="p-8 rounded-sm border border-border bg-secondary/30">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-4">What Teams Invest In</h3>
-                <ul className="space-y-3 text-muted-foreground text-sm">
-                  <li className="flex items-center gap-3"><TrendingUp size={18} className="text-primary shrink-0" /> Physical Training & Conditioning</li>
-                  <li className="flex items-center gap-3"><Target size={18} className="text-primary shrink-0" /> Tactical & Strategic Preparation</li>
-                </ul>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <div className="p-8 rounded-sm border border-primary/30 bg-primary/5">
-                <h3 className="font-display text-lg font-semibold text-primary mb-4">What's Often Missing</h3>
-                <ul className="space-y-3 text-muted-foreground text-sm">
-                  <li className="flex items-center gap-3"><Users size={18} className="text-primary shrink-0" /> Communication & Team Cohesion</li>
-                  <li className="flex items-center gap-3"><Heart size={18} className="text-primary shrink-0" /> Motivation & Emotional Intelligence</li>
-                  <li className="flex items-center gap-3"><Brain size={18} className="text-primary shrink-0" /> Leadership Development</li>
-                </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
+            <div className="space-y-8">
+              <AnimatedSection delay={0.1}>
+                <div className="p-8 rounded-sm border border-border bg-secondary/30">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-4">What Teams Invest In</h3>
+                  <ul className="space-y-3 text-muted-foreground text-sm">
+                    <li className="flex items-center gap-3"><TrendingUp size={18} className="text-primary shrink-0" /> Physical Training & Conditioning</li>
+                    <li className="flex items-center gap-3"><Target size={18} className="text-primary shrink-0" /> Tactical & Strategic Preparation</li>
+                  </ul>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.2}>
+                <div className="p-8 rounded-sm border border-primary/30 bg-primary/5">
+                  <h3 className="font-display text-lg font-semibold text-primary mb-4">What's Often Missing</h3>
+                  <ul className="space-y-3 text-muted-foreground text-sm">
+                    <li className="flex items-center gap-3"><Users size={18} className="text-primary shrink-0" /> Communication & Team Cohesion</li>
+                    <li className="flex items-center gap-3"><Heart size={18} className="text-primary shrink-0" /> Motivation & Emotional Intelligence</li>
+                    <li className="flex items-center gap-3"><Brain size={18} className="text-primary shrink-0" /> Leadership Development</li>
+                  </ul>
+                </div>
+              </AnimatedSection>
+            </div>
+            <AnimatedSection delay={0.3}>
+              <div className="relative rounded-sm overflow-hidden">
+                <img src={teamHuddle} alt="Team huddle showing the importance of team cohesion" loading="lazy" width={1280} height={854} className="w-full h-[400px] object-cover rounded-sm" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
             </AnimatedSection>
           </div>
@@ -94,8 +106,10 @@ const Home = () => {
       </section>
 
       {/* The 3QTR Solution */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <img src={performanceAbstract} alt="" loading="lazy" width={1920} height={800} className="absolute inset-0 w-full h-full object-cover opacity-20" />
+        <div className="absolute inset-0 bg-background/80" />
+        <div className="relative z-10 container mx-auto px-6">
           <AnimatedSection>
             <SectionHeading
               label="The Solution"
@@ -110,7 +124,7 @@ const Home = () => {
                 { icon: Lightbulb, title: "Develop", desc: "Customized coaching strategies that turn insights into actionable development." },
                 { icon: TrendingUp, title: "Perform", desc: "Cohesive teams that communicate, lead, and compete at the highest level." },
               ].map((s, i) => (
-                <div key={i} className="text-center p-8">
+                <div key={i} className="text-center p-8 bg-card/50 backdrop-blur-sm rounded-sm border border-border/50">
                   <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-primary/10 flex items-center justify-center">
                     <s.icon size={24} className="text-primary" />
                   </div>
@@ -127,7 +141,12 @@ const Home = () => {
       <section className="py-24 md:py-32 bg-card">
         <div className="container mx-auto px-6">
           <AnimatedSection>
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="relative">
+                <img src={founderPortrait} alt="Colette M. Hosie, Founder of 3QTR" loading="lazy" width={800} height={1024} className="w-full max-w-sm mx-auto rounded-sm object-cover aspect-[3/4]" />
+                <div className="absolute inset-0 rounded-sm ring-1 ring-primary/20 max-w-sm mx-auto" />
+                <div className="absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-primary/40 rounded-br-sm max-w-sm mx-auto" />
+              </div>
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3 block">Founder</span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Colette M. Hosie</h2>
@@ -138,25 +157,25 @@ const Home = () => {
                 <Link to="/about" className="inline-flex items-center gap-2 text-sm font-semibold text-primary uppercase tracking-wider hover:gap-3 transition-all">
                   Read Full Bio <ArrowRight size={16} />
                 </Link>
-              </div>
-              <div className="space-y-4">
-                {[
-                  { label: "Athlete & Engineer", color: "text-primary" },
-                  { label: "NCAA-Certified AAU Coach", color: "text-primary" },
-                  { label: "29-Year Fortune 500 Executive", color: "text-primary" },
-                  { label: "Hall of Fame Team Member", color: "text-primary" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 p-4 rounded-sm bg-secondary/30 border border-border">
-                    <Award size={18} className={`${item.color} shrink-0`} />
-                    <span className="text-sm font-medium">{item.label}</span>
-                  </div>
-                ))}
-                <div className="flex items-center gap-3 p-4 rounded-sm bg-secondary/30 border border-border">
-                  <span className="text-sm font-medium">Triple-Certified:</span>
-                  <div className="flex gap-2">
-                    <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-disc">DISC</span>
-                    <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-indigo">Indigo</span>
-                    <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-eq">EQ</span>
+                <div className="mt-8 space-y-3">
+                  {[
+                    { label: "Athlete & Engineer" },
+                    { label: "NCAA-Certified AAU Coach" },
+                    { label: "29-Year Fortune 500 Executive" },
+                    { label: "Hall of Fame Team Member" },
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border">
+                      <Award size={16} className="text-primary shrink-0" />
+                      <span className="text-sm font-medium">{item.label}</span>
+                    </div>
+                  ))}
+                  <div className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border">
+                    <span className="text-sm font-medium">Triple-Certified:</span>
+                    <div className="flex gap-2">
+                      <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-disc">DISC</span>
+                      <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-indigo">Indigo</span>
+                      <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-eq">EQ</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -199,7 +218,7 @@ const Home = () => {
       </section>
 
       {/* Who We Serve Preview */}
-      <section className="py-24 md:py-32 bg-card">
+      <section className="relative py-24 md:py-32 bg-card overflow-hidden">
         <div className="container mx-auto px-6">
           <AnimatedSection>
             <SectionHeading
@@ -208,22 +227,27 @@ const Home = () => {
               description="From high school varsity to elite college programs, 3QTR empowers athletes, coaches, and parents."
             />
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              { icon: Shield, title: "Varsity High School" },
-              { icon: Award, title: "College Programs" },
-              { icon: Users, title: "AAU & Club Sports" },
-              { icon: Heart, title: "Parents" },
-            ].map((a, i) => (
-              <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="text-center p-8 rounded-sm border border-border bg-secondary/20 hover:border-primary/30 transition-colors">
-                  <a.icon size={32} className="text-primary mx-auto mb-4" />
-                  <h3 className="font-display text-base font-semibold">{a.title}</h3>
-                </div>
-              </AnimatedSection>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                { icon: Shield, title: "Varsity High School" },
+                { icon: Award, title: "College Programs" },
+                { icon: Users, title: "AAU & Club Sports" },
+                { icon: Heart, title: "Parents" },
+              ].map((a, i) => (
+                <AnimatedSection key={i} delay={i * 0.1}>
+                  <div className="text-center p-8 rounded-sm border border-border bg-secondary/20 hover:border-primary/30 transition-colors">
+                    <a.icon size={32} className="text-primary mx-auto mb-4" />
+                    <h3 className="font-display text-base font-semibold">{a.title}</h3>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+            <AnimatedSection delay={0.3}>
+              <img src={athleteFocus} alt="Athlete focused on performance" loading="lazy" width={1280} height={854} className="w-full h-[360px] object-cover rounded-sm" />
+            </AnimatedSection>
           </div>
-          <AnimatedSection delay={0.3}>
+          <AnimatedSection delay={0.4}>
             <div className="text-center mt-10">
               <Link to="/who-we-serve" className="inline-flex items-center gap-2 text-sm font-semibold text-primary uppercase tracking-wider hover:gap-3 transition-all">
                 Explore All Audiences <ArrowRight size={16} />
@@ -261,8 +285,10 @@ const Home = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 md:py-32 bg-card">
-        <div className="container mx-auto px-6 text-center">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <img src={teamHuddle} alt="" loading="lazy" width={1280} height={854} className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-card/90" />
+        <div className="relative z-10 container mx-auto px-6 text-center">
           <AnimatedSection>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto leading-tight">
               Let's Talk About What Your Team Is <span className="text-gradient-gold">Missing</span>
