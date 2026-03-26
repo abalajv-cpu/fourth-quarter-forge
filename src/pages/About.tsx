@@ -2,13 +2,17 @@ import { Link } from "react-router-dom";
 import { Award, ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
+import founderPortrait from "@/assets/founder-portrait.jpg";
+import coachingSession from "@/assets/coaching-session.jpg";
 
 const About = () => {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <img src={coachingSession} alt="" loading="lazy" width={1280} height={720} className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-background/85" />
+        <div className="relative z-10 container mx-auto px-6">
           <AnimatedSection>
             <SectionHeading
               label="About"
@@ -21,9 +25,15 @@ const About = () => {
 
       {/* Story */}
       <section className="py-16 md:py-24 bg-card">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-6 max-w-5xl">
           <AnimatedSection>
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
+              <div className="md:col-span-2">
+                <div className="relative">
+                  <img src={founderPortrait} alt="Colette M. Hosie, Founder of 3QTR" loading="lazy" width={800} height={1024} className="w-full rounded-sm object-cover aspect-[3/4]" />
+                  <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-2 border-r-2 border-primary/40 rounded-br-sm" />
+                </div>
+              </div>
               <div className="md:col-span-3 space-y-6">
                 <h3 className="font-display text-2xl font-bold">Colette M. Hosie</h3>
                 <div className="gold-divider-left" />
@@ -36,22 +46,22 @@ const About = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   3QTR was born from the belief that the missing piece of team performance isn't physical or tactical — it's human. Communication, motivation, leadership, emotional intelligence, and cohesion are the factors that separate good teams from great ones.
                 </p>
-              </div>
-              <div className="md:col-span-2 space-y-4">
-                {[
-                  { label: "Athlete & Engineer", color: "text-primary" },
-                  { label: "NCAA-Certified AAU Coach", color: "text-primary" },
-                  { label: "29-Year Fortune 500 Executive", color: "text-primary" },
-                  { label: "Hall of Fame Team Member", color: "text-primary" },
-                  { label: "DISC Certified", color: "text-brand-disc" },
-                  { label: "Indigo Certified", color: "text-brand-indigo" },
-                  { label: "EQ Certified", color: "text-brand-eq" },
-                ].map((c, i) => (
-                  <div key={i} className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border">
-                    <Award size={16} className={`${c.color} shrink-0`} />
-                    <span className="text-sm font-medium">{c.label}</span>
-                  </div>
-                ))}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+                  {[
+                    { label: "Athlete & Engineer", color: "text-primary" },
+                    { label: "NCAA-Certified AAU Coach", color: "text-primary" },
+                    { label: "29-Year Fortune 500 Executive", color: "text-primary" },
+                    { label: "Hall of Fame Team Member", color: "text-primary" },
+                    { label: "DISC Certified", color: "text-brand-disc" },
+                    { label: "Indigo Certified", color: "text-brand-indigo" },
+                    { label: "EQ Certified", color: "text-brand-eq" },
+                  ].map((c, i) => (
+                    <div key={i} className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border">
+                      <Award size={16} className={`${c.color} shrink-0`} />
+                      <span className="text-sm font-medium">{c.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </AnimatedSection>

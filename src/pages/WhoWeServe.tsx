@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Award, Users, Heart } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
+import studentAthletes from "@/assets/student-athletes.jpg";
+import teamHuddle from "@/assets/team-huddle.jpg";
 
 const audiences = [
   {
@@ -53,8 +55,11 @@ const audiences = [
 
 const WhoWeServe = () => (
   <main className="pt-20">
-    <section className="py-24 md:py-32">
-      <div className="container mx-auto px-6">
+    {/* Hero with image */}
+    <section className="relative py-24 md:py-32 overflow-hidden">
+      <img src={studentAthletes} alt="" loading="lazy" width={1280} height={720} className="absolute inset-0 w-full h-full object-cover opacity-20" />
+      <div className="absolute inset-0 bg-background/80" />
+      <div className="relative z-10 container mx-auto px-6">
         <AnimatedSection>
           <SectionHeading
             label="Audiences"
@@ -62,7 +67,17 @@ const WhoWeServe = () => (
             description="3QTR works with competitive sports programs and families committed to developing the complete athlete."
           />
         </AnimatedSection>
+      </div>
+    </section>
 
+    {/* Feature image band */}
+    <section className="relative h-64 md:h-80 overflow-hidden">
+      <img src={teamHuddle} alt="Team coming together" loading="lazy" width={1280} height={854} className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
+    </section>
+
+    <section className="py-16 md:py-24">
+      <div className="container mx-auto px-6">
         <div className="space-y-12 max-w-4xl mx-auto">
           {audiences.map((a, i) => (
             <AnimatedSection key={i} delay={i * 0.1}>
