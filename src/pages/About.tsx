@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Award, ArrowRight } from "lucide-react";
+import { Award, ArrowRight, GraduationCap } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
-import founderPortrait from "@/assets/founder-portrait.jpg";
+import ExpandableCredential from "@/components/ExpandableCredential";
+import AssessmentModal from "@/components/AssessmentModal";
+import founderGreenShirt from "@/assets/founder-green-shirt.jpg";
 import coachingSession from "@/assets/coaching-session.jpg";
 
 const About = () => {
+  const [assessModal, setAssessModal] = useState(false);
+
   return (
     <main className="pt-20">
       {/* Hero */}
@@ -30,7 +35,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-start">
               <div className="md:col-span-2">
                 <div className="relative">
-                  <img src={founderPortrait} alt="Colette M. Hosie, Founder of 3QTR" loading="lazy" width={800} height={1024} className="w-full rounded-sm object-cover aspect-[3/4]" />
+                  <img src={founderGreenShirt} alt="Colette M. Hosie, Founder of 3QTR" loading="lazy" width={800} height={1024} className="w-full rounded-sm object-cover aspect-[3/4]" />
                   <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-2 border-r-2 border-primary/40 rounded-br-sm" />
                 </div>
               </div>
@@ -47,26 +52,65 @@ const About = () => {
                   3QTR was born from the belief that the missing piece of team performance isn't physical or tactical — it's human. Communication, motivation, leadership, emotional intelligence, and cohesion are the factors that separate good teams from great ones.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-                  {[
-                    { label: "Athlete & Engineer", color: "text-primary" },
-                    { label: "NCAA-Certified AAU Coach", color: "text-primary" },
-                    { label: "29-Year Fortune 500 Executive", color: "text-primary" },
-                    { label: "Hall of Fame Team Member", color: "text-primary" },
-                    { label: "DISC Certified", color: "text-brand-disc" },
-                    { label: "Indigo Certified", color: "text-brand-indigo" },
-                    { label: "EQ Certified", color: "text-brand-eq" },
-                  ].map((c, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border">
-                      <Award size={16} className={`${c.color} shrink-0`} />
-                      <span className="text-sm font-medium">{c.label}</span>
+                  <ExpandableCredential
+                    label="Athlete & Hall of Fame Team Member"
+                    details="Missouri University of Science & Technology Women's Varsity Basketball"
+                  />
+                  <ExpandableCredential label="NCAA-Certified AAU Coach" />
+                  <ExpandableCredential
+                    label="29-Year Fortune 500 Executive"
+                    details={
+                      <ul className="space-y-1">
+                        <li>• Harley Davidson</li>
+                        <li>• Texas Instruments</li>
+                        <li>• Tiffany & Co.</li>
+                        <li>• Amazon</li>
+                        <li>• Nike, Inc.</li>
+                      </ul>
+                    }
+                  />
+                  <ExpandableCredential
+                    icon={<GraduationCap size={16} className="text-primary shrink-0" />}
+                    label="Engineer & MBA"
+                    details={
+                      <ul className="space-y-1">
+                        <li>• BS – Mechanical Engineering – Missouri University of Science & Technology, Rolla, MO</li>
+                        <li>• MBA – University of Dallas, Irving, TX</li>
+                      </ul>
+                    }
+                  />
+                  <div className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border sm:col-span-2">
+                    <span className="text-sm font-medium">Triple-Certified:</span>
+                    <div className="flex gap-2">
+                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-indigo hover:opacity-80 transition-opacity cursor-pointer">Indigo</button>
+                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-disc hover:opacity-80 transition-opacity cursor-pointer">DISC</button>
+                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-eq hover:opacity-80 transition-opacity cursor-pointer">EQ</button>
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Assess Modal */}
+      <AssessmentModal isOpen={assessModal} onClose={() => setAssessModal(false)} title="Assessment Certifications">
+        <div className="space-y-6">
+          <div>
+            <h4 className="font-display text-lg font-semibold text-brand-indigo mb-2">Indigo</h4>
+            <p>A motivational assessment that uncovers why athletes and coaches do what they do. Indigo measures 12 driving forces that shape attitude, effort, and commitment — helping programs align individual purpose with team goals to unlock sustained motivation and reduce burnout.</p>
+          </div>
+          <div>
+            <h4 className="font-display text-lg font-semibold text-brand-disc mb-2">DISC</h4>
+            <p>A behavioral assessment that reveals how individuals communicate, compete, and collaborate under pressure. DISC identifies four core behavioral styles — Dominance, Influence, Steadiness, and Conscientiousness — giving coaches and athletes a shared language for building trust, managing conflict, and performing when it matters most.</p>
+          </div>
+          <div>
+            <h4 className="font-display text-lg font-semibold text-brand-eq mb-2">EQ (Emotional Intelligence)</h4>
+            <p>An assessment that measures an individual's ability to recognize, understand, and manage emotions — both their own and others'. For coaches and athletes alike, high EQ translates to better decision-making under pressure, stronger team chemistry, and the mental resilience to push through adversity.</p>
+          </div>
+        </div>
+      </AssessmentModal>
 
       {/* Philosophy */}
       <section className="py-24 md:py-32">

@@ -19,7 +19,7 @@ const services = [
   },
   {
     title: "Coaching Staff Development",
-    price: "Starting from $2,800",
+    price: "Custom packages available",
     assessments: "DISC + EQ",
     description: "Elevate your coaching staff's ability to communicate, motivate, and lead. This program develops emotional intelligence and behavioral awareness across your entire coaching team.",
     features: [
@@ -31,7 +31,7 @@ const services = [
   },
   {
     title: "The 3QTR Edge",
-    price: "Starting from $12,000",
+    price: "Custom packages available",
     assessments: "Full Suite",
     description: "Our flagship program — a comprehensive, season-long performance system that integrates athlete profiling, coaching development, team cohesion workshops, and ongoing strategic support.",
     features: [
@@ -46,7 +46,7 @@ const services = [
   },
   {
     title: "Season Retainer",
-    price: "Starting from $750/month",
+    price: "Custom packages available",
     assessments: "Ongoing Support",
     description: "Continuous strategic consulting throughout your competitive season. On-demand support for coaches, athletes, and parents — keeping your team aligned, motivated, and performing.",
     features: [
@@ -61,7 +61,6 @@ const services = [
 
 const Services = () => (
   <main className="pt-20">
-    {/* Hero with image */}
     <section className="relative py-24 md:py-32 overflow-hidden">
       <img src={coachingSession} alt="" loading="lazy" width={1280} height={720} className="absolute inset-0 w-full h-full object-cover opacity-15" />
       <div className="absolute inset-0 bg-background/85" />

@@ -97,9 +97,9 @@ const Contact = () => {
                   <h3 className="font-display text-xl font-semibold mb-6">Get in Touch</h3>
                   <div className="gold-divider-left mb-6" />
                   <div className="space-y-5">
-                    <a href="tel:2032196443" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
+                    <a href="tel:2039798702" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
                       <Phone size={20} className="text-primary shrink-0" />
-                      <span>(203) 219-6443</span>
+                      <span>(203) 979-8702</span>
                     </a>
                     <a href="mailto:chosie222@gmail.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
                       <Mail size={20} className="text-primary shrink-0" />
