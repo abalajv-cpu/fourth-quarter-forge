@@ -9,7 +9,7 @@ import ExpandableCredential from "@/components/ExpandableCredential";
 import heroBg from "@/assets/hero-bg.jpg";
 import teamHuddle from "@/assets/team-huddle.jpg";
 import girlsSports from "@/assets/girls-sports.jpg";
-import founderPortrait from "@/assets/founder-portrait.jpg";
+import founderPortrait from "@/assets/founder-green-shirt.jpg";
 import performanceAbstract from "@/assets/performance-abstract.jpg";
 import athleteFocus from "@/assets/athlete-focus.jpg";
 
