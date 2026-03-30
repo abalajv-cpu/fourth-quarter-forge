@@ -1,15 +1,23 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Target, Users, Brain, TrendingUp, Shield, Award, Lightbulb, Heart } from "lucide-react";
+import { ArrowRight, Target, Users, Brain, TrendingUp, Shield, Award, Lightbulb, Heart, GraduationCap } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
+import AssessmentModal from "@/components/AssessmentModal";
+import ExpandableCredential from "@/components/ExpandableCredential";
 import heroBg from "@/assets/hero-bg.jpg";
 import teamHuddle from "@/assets/team-huddle.jpg";
+import girlsSports from "@/assets/girls-sports.jpg";
 import founderPortrait from "@/assets/founder-portrait.jpg";
 import performanceAbstract from "@/assets/performance-abstract.jpg";
 import athleteFocus from "@/assets/athlete-focus.jpg";
 
 const Home = () => {
+  const [assessModal, setAssessModal] = useState(false);
+  const [developModal, setDevelopModal] = useState(false);
+  const [performModal, setPerformModal] = useState(false);
+
   return (
     <main>
       {/* Hero */}
@@ -47,16 +55,10 @@ const Home = () => {
             transition={{ duration: 0.7, delay: 0.6 }}
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link
-              to="/contact"
-              className="px-8 py-4 text-sm font-semibold bg-gold-gradient text-primary-foreground rounded-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
-            >
+            <Link to="/contact" className="px-8 py-4 text-sm font-semibold bg-gold-gradient text-primary-foreground rounded-sm uppercase tracking-wider hover:opacity-90 transition-opacity">
               Book a Discovery Call
             </Link>
-            <Link
-              to="/about"
-              className="px-8 py-4 text-sm font-semibold border border-primary text-primary rounded-sm uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-colors"
-            >
+            <Link to="/about" className="px-8 py-4 text-sm font-semibold border border-primary text-primary rounded-sm uppercase tracking-wider hover:bg-primary hover:text-primary-foreground transition-colors">
               Learn More
             </Link>
           </motion.div>
@@ -96,9 +98,15 @@ const Home = () => {
               </AnimatedSection>
             </div>
             <AnimatedSection delay={0.3}>
-              <div className="relative rounded-sm overflow-hidden">
-                <img src={teamHuddle} alt="Team huddle showing the importance of team cohesion" loading="lazy" width={1280} height={854} className="w-full h-[400px] object-cover rounded-sm" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+              <div className="space-y-4">
+                <div className="relative rounded-sm overflow-hidden">
+                  <img src={teamHuddle} alt="Team huddle showing the importance of team cohesion" loading="lazy" width={1280} height={854} className="w-full h-[200px] object-cover rounded-sm" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                </div>
+                <div className="relative rounded-sm overflow-hidden">
+                  <img src={girlsSports} alt="Girls sports team showing unity and teamwork" loading="lazy" width={1280} height={854} className="w-full h-[200px] object-cover rounded-sm" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                </div>
               </div>
             </AnimatedSection>
           </div>
@@ -120,22 +128,81 @@ const Home = () => {
           <AnimatedSection delay={0.2}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
-                { icon: Brain, title: "Assess", desc: "DISC, Indigo & EQ assessments reveal each individual's strengths and growth areas." },
-                { icon: Lightbulb, title: "Develop", desc: "Customized coaching strategies that turn insights into actionable development." },
-                { icon: TrendingUp, title: "Perform", desc: "Cohesive teams that communicate, lead, and compete at the highest level." },
+                {
+                  icon: Brain,
+                  title: "Assess",
+                  desc: "DISC, Indigo & EQ assessments reveal each individual's strengths and growth areas.",
+                  onClick: () => setAssessModal(true),
+                },
+                {
+                  icon: Lightbulb,
+                  title: "Develop",
+                  desc: "Customized coaching strategies that turn insights into actionable development.",
+                  onClick: () => setDevelopModal(true),
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Perform",
+                  desc: "Cohesive teams that communicate, lead, and compete at the highest level.",
+                  onClick: () => setPerformModal(true),
+                },
               ].map((s, i) => (
-                <div key={i} className="text-center p-8 bg-card/50 backdrop-blur-sm rounded-sm border border-border/50">
-                  <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-primary/10 flex items-center justify-center">
+                <button
+                  key={i}
+                  onClick={s.onClick}
+                  className="text-center p-8 bg-card/50 backdrop-blur-sm rounded-sm border border-border/50 hover:border-primary/50 hover:bg-card/80 transition-all cursor-pointer group"
+                >
+                  <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <s.icon size={24} className="text-primary" />
                   </div>
                   <h3 className="font-display text-xl font-semibold mb-3">{s.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                </div>
+                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary uppercase tracking-wider">
+                    Learn More <ArrowRight size={12} />
+                  </span>
+                </button>
               ))}
             </div>
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Assess Modal */}
+      <AssessmentModal isOpen={assessModal} onClose={() => setAssessModal(false)} title="Assess: The Foundation">
+        <div className="space-y-6">
+          <div>
+            <h4 className="font-display text-lg font-semibold text-brand-indigo mb-2">Indigo</h4>
+            <p>A motivational assessment that uncovers why athletes and coaches do what they do. Indigo measures 12 driving forces that shape attitude, effort, and commitment — helping programs align individual purpose with team goals to unlock sustained motivation and reduce burnout.</p>
+          </div>
+          <div>
+            <h4 className="font-display text-lg font-semibold text-brand-disc mb-2">DISC</h4>
+            <p>A behavioral assessment that reveals how individuals communicate, compete, and collaborate under pressure. DISC identifies four core behavioral styles — Dominance, Influence, Steadiness, and Conscientiousness — giving coaches and athletes a shared language for building trust, managing conflict, and performing when it matters most.</p>
+          </div>
+          <div>
+            <h4 className="font-display text-lg font-semibold text-brand-eq mb-2">EQ (Emotional Intelligence)</h4>
+            <p>An assessment that measures an individual's ability to recognize, understand, and manage emotions — both their own and others'. For coaches and athletes alike, high EQ translates to better decision-making under pressure, stronger team chemistry, and the mental resilience to push through adversity.</p>
+          </div>
+        </div>
+      </AssessmentModal>
+
+      {/* Develop Modal */}
+      <AssessmentModal isOpen={developModal} onClose={() => setDevelopModal(false)} title="Develop: Turning Insight into Action">
+        <p>Most programs invest heavily in physical training and game film, but leave the mental and behavioral side of performance to chance.</p>
+        <p><strong className="text-brand-indigo">Indigo</strong> reveals what truly motivates each student-athlete — what fuels their drive to push through adversity or causes them to quietly disengage when the pressure mounts. That self-knowledge doesn't stop at the final buzzer; it follows student-athletes into the classroom, their careers, and every competitive environment they will face in life.</p>
+        <p><strong className="text-brand-disc">DISC</strong> shows coaches how each athlete is wired to communicate and compete, so they can be coached in the way that actually lands.</p>
+        <p><strong className="text-brand-eq">EQ</strong> identifies each athlete's capacity to handle pressure, conflict, and team dynamics with the maturity that separates good competitors from great ones.</p>
+        <p>Used together, these tools give student-athletes the self-awareness to become the competitor and teammate their team needs them to be — and give coaches the insight to develop each individual with purpose and precision.</p>
+      </AssessmentModal>
+
+      {/* Perform Modal */}
+      <AssessmentModal isOpen={performModal} onClose={() => setPerformModal(false)} title="Perform: Where It All Comes Together">
+        <p>Championships are not won on talent alone. The teams that consistently win are the ones that know how to communicate under pressure, stay motivated through a grueling season, and manage the emotional weight of competition without fracturing.</p>
+        <p><strong className="text-brand-indigo">Indigo</strong>, <strong className="text-brand-disc">DISC</strong>, and <strong className="text-brand-eq">EQ</strong> assessments give programs the behavioral intelligence to do exactly that.</p>
+        <p>When coaches understand what drives each player, they stop coaching to the group and start developing individuals — and individual development is what moves the scoreboard.</p>
+        <p>When every athlete understands how they and their teammates are wired, communication sharpens, trust builds faster, and conflict gets resolved before it becomes a locker room problem.</p>
+        <p>When the emotional discipline to perform in pressure moments, bounce back from defeat, and lead when the team needs it most is developed, winning becomes a culture — not a coincidence.</p>
+        <p>These assessments do not replace hard work or great coaching. They make both more effective.</p>
+      </AssessmentModal>
 
       {/* Founder Preview */}
       <section className="py-24 md:py-32 bg-card">
@@ -158,23 +225,39 @@ const Home = () => {
                   Read Full Bio <ArrowRight size={16} />
                 </Link>
                 <div className="mt-8 space-y-3">
-                  {[
-                    { label: "Athlete & Engineer" },
-                    { label: "NCAA-Certified AAU Coach" },
-                    { label: "29-Year Fortune 500 Executive" },
-                    { label: "Hall of Fame Team Member" },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border">
-                      <Award size={16} className="text-primary shrink-0" />
-                      <span className="text-sm font-medium">{item.label}</span>
-                    </div>
-                  ))}
+                  <ExpandableCredential
+                    label="Athlete & Hall of Fame Team Member"
+                    details="Missouri University of Science & Technology Women's Varsity Basketball"
+                  />
+                  <ExpandableCredential label="NCAA-Certified AAU Coach" />
+                  <ExpandableCredential
+                    label="29-Year Fortune 500 Executive"
+                    details={
+                      <ul className="space-y-1">
+                        <li>• Harley Davidson</li>
+                        <li>• Texas Instruments</li>
+                        <li>• Tiffany & Co.</li>
+                        <li>• Amazon</li>
+                        <li>• Nike, Inc.</li>
+                      </ul>
+                    }
+                  />
+                  <ExpandableCredential
+                    icon={<GraduationCap size={16} className="text-primary shrink-0" />}
+                    label="Engineer & MBA"
+                    details={
+                      <ul className="space-y-1">
+                        <li>• Bachelor of Science – Mechanical Engineering – Missouri University of Science & Technology, Rolla, MO</li>
+                        <li>• Masters Business Administration (MBA) – University of Dallas, Irving, TX</li>
+                      </ul>
+                    }
+                  />
                   <div className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border">
                     <span className="text-sm font-medium">Triple-Certified:</span>
                     <div className="flex gap-2">
-                      <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-disc">DISC</span>
-                      <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-indigo">Indigo</span>
-                      <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-eq">EQ</span>
+                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-indigo hover:opacity-80 transition-opacity cursor-pointer">Indigo</button>
+                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-disc hover:opacity-80 transition-opacity cursor-pointer">DISC</button>
+                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-eq hover:opacity-80 transition-opacity cursor-pointer">EQ</button>
                     </div>
                   </div>
                 </div>
@@ -197,9 +280,9 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
               { title: "Student-Athlete Profile", price: "From $225", desc: "Indigo + DISC assessments for individual athlete development." },
-              { title: "Coaching Staff Development", price: "From $2,800", desc: "DISC + EQ programs for coaching staff alignment and growth." },
-              { title: "The 3QTR Edge", price: "From $12,000", desc: "Our flagship comprehensive team performance program.", featured: true },
-              { title: "Season Retainer", price: "From $750/mo", desc: "Ongoing strategic support throughout your competitive season." },
+              { title: "Coaching Staff Development", price: "Custom packages available", desc: "DISC + EQ programs for coaching staff alignment and growth." },
+              { title: "The 3QTR Edge", price: "Custom packages available", desc: "Our flagship comprehensive team performance program.", featured: true },
+              { title: "Season Retainer", price: "Custom packages available", desc: "Ongoing strategic support throughout your competitive season." },
             ].map((s, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className={`p-8 rounded-sm border h-full flex flex-col ${s.featured ? "border-primary bg-primary/5 ring-1 ring-primary/20" : "border-border bg-card"} hover:border-primary/50 transition-colors`}>
@@ -230,16 +313,22 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { icon: Shield, title: "Varsity High School" },
-                { icon: Award, title: "College Programs" },
-                { icon: Users, title: "AAU & Club Sports" },
-                { icon: Heart, title: "Parents" },
+                { icon: Shield, title: "Varsity High School", anchor: "varsity" },
+                { icon: Award, title: "College Programs", anchor: "college" },
+                { icon: Users, title: "AAU & Club Sports", anchor: "aau" },
+                { icon: Heart, title: "Parents", anchor: "parents" },
               ].map((a, i) => (
                 <AnimatedSection key={i} delay={i * 0.1}>
-                  <div className="text-center p-8 rounded-sm border border-border bg-secondary/20 hover:border-primary/30 transition-colors">
-                    <a.icon size={32} className="text-primary mx-auto mb-4" />
+                  <Link
+                    to={`/who-we-serve#${a.anchor}`}
+                    className="text-center p-8 rounded-sm border border-border bg-secondary/20 hover:border-primary/30 transition-colors block group"
+                  >
+                    <a.icon size={32} className="text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
                     <h3 className="font-display text-base font-semibold">{a.title}</h3>
-                  </div>
+                    <span className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                      Learn More <ArrowRight size={10} />
+                    </span>
+                  </Link>
                 </AnimatedSection>
               ))}
             </div>
@@ -261,10 +350,7 @@ const Home = () => {
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-6">
           <AnimatedSection>
-            <SectionHeading
-              label="Why 3QTR"
-              title="Built Different"
-            />
+            <SectionHeading label="Why 3QTR" title="Built Different" />
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
@@ -297,10 +383,7 @@ const Home = () => {
               Schedule a complimentary discovery call to explore how 3QTR can elevate your team's performance.
             </p>
             <div className="mt-10">
-              <Link
-                to="/contact"
-                className="inline-block px-10 py-4 text-sm font-semibold bg-gold-gradient text-primary-foreground rounded-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
-              >
+              <Link to="/contact" className="inline-block px-10 py-4 text-sm font-semibold bg-gold-gradient text-primary-foreground rounded-sm uppercase tracking-wider hover:opacity-90 transition-opacity">
                 Book Your Discovery Call
               </Link>
             </div>
