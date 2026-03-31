@@ -7,7 +7,7 @@ import coachingSession from "@/assets/coaching-session.jpg";
 const services = [
   {
     title: "Student-Athlete Profile",
-    price: "Starting from $225 per athlete",
+    price: "Custom packages available",
     assessments: "Indigo + DISC",
     description: "A comprehensive behavioral and motivational profile for each athlete. Understand how they communicate, what drives them, and how they respond under pressure. Equip coaches with the insights to lead each individual more effectively.",
     features: [
