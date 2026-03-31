@@ -279,7 +279,7 @@ const Home = () => {
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              { title: "Student-Athlete Profile", price: "From $225", desc: "Indigo + DISC assessments for individual athlete development." },
+              { title: "Student-Athlete Profile", price: "Custom packages available", desc: "Indigo + DISC assessments for individual athlete development." },
               { title: "Coaching Staff Development", price: "Custom packages available", desc: "DISC + EQ programs for coaching staff alignment and growth." },
               { title: "The 3QTR Edge", price: "Custom packages available", desc: "Our flagship comprehensive team performance program.", featured: true },
               { title: "Season Retainer", price: "Custom packages available", desc: "Ongoing strategic support throughout your competitive season." },
