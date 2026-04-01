@@ -119,9 +119,7 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                 </div>
               </div>
-            </AnimatedSection>
-              </div>
-            </AnimatedSection>
+          </div>
           </div>
         </div>
       </section>
