@@ -134,6 +134,7 @@ const About = () => {
       <section className="relative py-16 md:py-24 overflow-hidden">
         <img src={teamUnity} alt="Athletes putting hands together in unity" loading="lazy" width={1920} height={1080} className="absolute inset-0 w-full h-full object-cover opacity-15" />
         <div className="absolute inset-0 bg-card/90" />
+        <div className="relative z-10 container mx-auto px-6">
           <AnimatedSection>
             <SectionHeading label="Values" title="What Drives 3QTR" />
           </AnimatedSection>
