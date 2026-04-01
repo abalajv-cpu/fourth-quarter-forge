@@ -100,7 +100,7 @@ const Home = () => {
             <AnimatedSection delay={0.3}>
               <div className="space-y-4">
                 <div className="relative rounded-sm overflow-hidden">
-                  <img src={teamHuddle} alt="Team huddle showing the importance of team cohesion" loading="lazy" width={1280} height={854} className="w-full h-[200px] object-cover rounded-sm" />
+                  <img src={teamHuddle} alt="Team huddle showing the importance of team cohesion" loading="lazy" width={1280} height={854} className="w-full h-[280px] md:h-[320px] object-cover rounded-sm" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                 </div>
                 <div className="relative rounded-sm overflow-hidden">
