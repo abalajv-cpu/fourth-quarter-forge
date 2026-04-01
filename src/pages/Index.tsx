@@ -75,8 +75,8 @@ const Home = () => {
               description="Teams invest heavily in physical training and tactical preparation — but the human side of performance is often overlooked."
             />
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+            <div className="flex flex-col justify-between space-y-6">
               <AnimatedSection delay={0.1}>
                 <div className="p-8 rounded-sm border border-border bg-secondary/30">
                   <h3 className="font-display text-lg font-semibold text-foreground mb-4">What Teams Invest In</h3>
@@ -96,15 +96,26 @@ const Home = () => {
                   </ul>
                 </div>
               </AnimatedSection>
+              <AnimatedSection delay={0.25}>
+                <div className="p-8 rounded-sm border border-border bg-secondary/30">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-4">The 3QTR Difference</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    We bring the fourth dimension of performance — behavioral intelligence, emotional awareness, and team alignment — to programs ready to compete at the highest level.
+                  </p>
+                  <Link to="/services" className="inline-flex items-center gap-2 text-sm font-semibold text-primary uppercase tracking-wider hover:gap-3 transition-all">
+                    Explore Our Solutions <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </AnimatedSection>
             </div>
             <AnimatedSection delay={0.3}>
-              <div className="space-y-4">
-                <div className="relative rounded-sm overflow-hidden">
-                  <img src={teamHuddle} alt="Team huddle showing the importance of team cohesion" loading="lazy" width={1280} height={854} className="w-full h-[280px] md:h-[320px] object-cover rounded-sm" />
+              <div className="space-y-4 h-full flex flex-col">
+                <div className="relative rounded-sm overflow-hidden flex-1">
+                  <img src={teamHuddle} alt="Team huddle showing the importance of team cohesion" loading="lazy" width={1280} height={854} className="w-full h-full min-h-[240px] object-cover object-center rounded-sm" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                 </div>
-                <div className="relative rounded-sm overflow-hidden">
-                  <img src={girlsSports} alt="Girls sports team showing unity and teamwork" loading="lazy" width={1280} height={854} className="w-full h-[280px] md:h-[320px] object-cover rounded-sm" />
+                <div className="relative rounded-sm overflow-hidden flex-1">
+                  <img src={girlsSports} alt="Girls sports team showing unity and teamwork" loading="lazy" width={1280} height={854} className="w-full h-full min-h-[240px] object-cover object-top rounded-sm" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                 </div>
               </div>
