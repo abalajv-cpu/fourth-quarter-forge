@@ -5,9 +5,6 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import studentAthletes from "@/assets/student-athletes.jpg";
 import teamHuddle from "@/assets/team-huddle.jpg";
-import varsityAthletes from "@/assets/varsity-athletes.jpg";
-import collegeAthletes from "@/assets/college-athletes.jpg";
-import athletesBanner1 from "@/assets/athletes-banner-1.jpg";
 
 const audiences = [
   {
@@ -21,7 +18,6 @@ const audiences = [
       "Develop emotional intelligence early",
       "Strengthen team cohesion and accountability",
     ],
-    image: varsityAthletes,
   },
   {
     id: "college",
@@ -35,7 +31,6 @@ const audiences = [
       "Recruiting advantage through character and behavioral insights",
       "Season-long strategic performance consulting",
     ],
-    image: collegeAthletes,
   },
   {
     id: "aau",
@@ -48,7 +43,6 @@ const audiences = [
       "Tournament-ready mental and emotional preparation",
       "Coach and parent alignment strategies",
     ],
-    image: teamHuddle,
   },
   {
     id: "parents",
@@ -61,7 +55,6 @@ const audiences = [
       "Improve parent-coach-athlete relationships",
       "Navigate the recruiting and college selection process with clarity",
     ],
-    image: studentAthletes,
   },
 ];
 
@@ -93,43 +86,35 @@ const WhoWeServe = () => {
         </div>
       </section>
 
-      {/* Athletes Banner Divider */}
-      <section className="relative h-48 md:h-64 overflow-hidden">
-        <img src={athletesBanner1} alt="Diverse athletes in action across multiple sports" loading="lazy" width={1920} height={640} className="w-full h-full object-cover" />
+      <section className="relative h-64 md:h-80 overflow-hidden">
+        <img src={teamHuddle} alt="Team coming together" loading="lazy" width={1280} height={854} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
       </section>
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6">
-          <div className="space-y-12 max-w-5xl mx-auto">
+          <div className="space-y-12 max-w-4xl mx-auto">
             {audiences.map((a, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div id={a.id} className={`rounded-sm border border-border bg-card hover:border-primary/30 transition-colors scroll-mt-24 overflow-hidden ${i % 2 === 0 ? '' : ''}`}>
-                  {/* Image accent at top of each card */}
-                  <div className="relative h-40 md:h-48 overflow-hidden">
-                    <img src={a.image} alt={a.title} loading="lazy" width={1280} height={856} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-card" />
-                  </div>
-                  <div className="p-8 md:p-10">
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                        <a.icon size={22} className="text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-display text-2xl font-bold">{a.title}</h3>
-                        {a.subtitle && <span className="text-sm text-primary">{a.subtitle}</span>}
-                      </div>
+                <div id={a.id} className="p-8 md:p-10 rounded-sm border border-border bg-card hover:border-primary/30 transition-colors scroll-mt-24">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <a.icon size={22} className="text-primary" />
                     </div>
-                    <p className="text-muted-foreground leading-relaxed mb-6">{a.description}</p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      {a.benefits.map((b, j) => (
-                        <li key={j} className="flex items-start gap-2 text-sm text-foreground/80">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
+                    <div>
+                      <h3 className="font-display text-2xl font-bold">{a.title}</h3>
+                      {a.subtitle && <span className="text-sm text-primary">{a.subtitle}</span>}
+                    </div>
                   </div>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{a.description}</p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {a.benefits.map((b, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-foreground/80">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </AnimatedSection>
             ))}
