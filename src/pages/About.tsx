@@ -7,6 +7,8 @@ import ExpandableCredential from "@/components/ExpandableCredential";
 import AssessmentModal from "@/components/AssessmentModal";
 import founderGreenShirt from "@/assets/founder-green-shirt.jpg";
 import coachingSession from "@/assets/coaching-session.jpg";
+import collegeAthletes from "@/assets/college-athletes.jpg";
+import teamUnity from "@/assets/team-unity.jpg";
 
 const About = () => {
   const [assessModal, setAssessModal] = useState(false);
