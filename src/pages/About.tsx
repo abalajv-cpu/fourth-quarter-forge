@@ -7,6 +7,8 @@ import ExpandableCredential from "@/components/ExpandableCredential";
 import AssessmentModal from "@/components/AssessmentModal";
 import founderGreenShirt from "@/assets/founder-green-shirt.jpg";
 import coachingSession from "@/assets/coaching-session.jpg";
+import athletesBanner2 from "@/assets/athletes-banner-2.jpg";
+import performanceAbstract from "@/assets/performance-abstract.jpg";
 
 const About = () => {
   const [assessModal, setAssessModal] = useState(false);
@@ -112,9 +114,17 @@ const About = () => {
         </div>
       </AssessmentModal>
 
+      {/* Athletes Celebration Divider */}
+      <section className="relative h-56 md:h-72 overflow-hidden">
+        <img src={athletesBanner2} alt="Athletes celebrating victory" loading="lazy" width={1920} height={640} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/40" />
+      </section>
+
       {/* Philosophy */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <img src={performanceAbstract} alt="" loading="lazy" width={1280} height={856} className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-background/90" />
+        <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
           <AnimatedSection>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-6 block">Philosophy</span>
             <blockquote className="font-display text-2xl md:text-3xl font-bold italic leading-relaxed text-foreground">
@@ -151,8 +161,10 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6 text-center">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <img src={coachingSession} alt="" loading="lazy" width={1280} height={720} className="absolute inset-0 w-full h-full object-cover opacity-10" />
+        <div className="absolute inset-0 bg-background/90" />
+        <div className="relative z-10 container mx-auto px-6 text-center">
           <AnimatedSection>
             <h2 className="font-display text-3xl md:text-4xl font-bold">Ready to <span className="text-gradient-gold">Unlock</span> Your Team's Potential?</h2>
             <div className="mt-8">
