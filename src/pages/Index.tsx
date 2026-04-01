@@ -12,6 +12,9 @@ import girlsSports from "@/assets/girls-sports.jpg";
 import founderPortrait from "@/assets/founder-green-shirt.jpg";
 import performanceAbstract from "@/assets/performance-abstract.jpg";
 import athleteFocus from "@/assets/athlete-focus.jpg";
+import athletesBanner1 from "@/assets/athletes-banner-1.jpg";
+import athletesBanner2 from "@/assets/athletes-banner-2.jpg";
+import athletesGrid from "@/assets/athletes-grid.jpg";
 
 const Home = () => {
   const [assessModal, setAssessModal] = useState(false);
@@ -65,6 +68,12 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Athlete Banner Divider 1 */}
+      <section className="relative h-48 md:h-64 overflow-hidden">
+        <img src={athletesBanner1} alt="Diverse athletes in action" loading="lazy" width={1920} height={640} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
+      </section>
+
       {/* Problem / Opportunity */}
       <section className="py-24 md:py-32 bg-card">
         <div className="container mx-auto px-6">
@@ -104,13 +113,19 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                 </div>
                 <div className="relative rounded-sm overflow-hidden">
-                  <img src={girlsSports} alt="Girls sports team showing unity and teamwork" loading="lazy" width={1280} height={854} className="w-full h-[200px] object-cover rounded-sm" />
+                  <img src={girlsSports} alt="Diverse athletes showing unity and teamwork" loading="lazy" width={1280} height={854} className="w-full h-[200px] object-cover rounded-sm" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                 </div>
               </div>
             </AnimatedSection>
           </div>
         </div>
+      </section>
+
+      {/* Athletes Grid Divider */}
+      <section className="relative h-64 md:h-80 overflow-hidden">
+        <img src={athletesGrid} alt="Athletes from soccer, football, track, and lacrosse" loading="lazy" width={1280} height={856} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/40" />
       </section>
 
       {/* The 3QTR Solution */}
@@ -268,8 +283,10 @@ const Home = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <img src={athletesBanner2} alt="" loading="lazy" width={1920} height={640} className="absolute inset-0 w-full h-full object-cover opacity-10" />
+        <div className="absolute inset-0 bg-background/90" />
+        <div className="relative z-10 container mx-auto px-6">
           <AnimatedSection>
             <SectionHeading
               label="Services"
@@ -298,6 +315,12 @@ const Home = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Coaching Session Divider */}
+      <section className="relative h-48 md:h-64 overflow-hidden">
+        <img src={athleteFocus} alt="Focused athlete ready to compete" loading="lazy" width={1280} height={856} className="w-full h-full object-cover object-top" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
       </section>
 
       {/* Who We Serve Preview */}
@@ -333,7 +356,10 @@ const Home = () => {
               ))}
             </div>
             <AnimatedSection delay={0.3}>
-              <img src={athleteFocus} alt="Athlete focused on performance" loading="lazy" width={1280} height={854} className="w-full h-[360px] object-cover rounded-sm" />
+              <div className="space-y-4">
+                <img src={girlsSports} alt="Diverse athletes in multiple sports" loading="lazy" width={1280} height={854} className="w-full h-[170px] object-cover rounded-sm" />
+                <img src={teamHuddle} alt="Team coming together" loading="lazy" width={1280} height={854} className="w-full h-[170px] object-cover rounded-sm" />
+              </div>
             </AnimatedSection>
           </div>
           <AnimatedSection delay={0.4}>
@@ -347,8 +373,10 @@ const Home = () => {
       </section>
 
       {/* Why 3QTR */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <img src={athletesBanner2} alt="" loading="lazy" width={1920} height={640} className="absolute inset-0 w-full h-full object-cover opacity-8" />
+        <div className="absolute inset-0 bg-background/95" />
+        <div className="relative z-10 container mx-auto px-6">
           <AnimatedSection>
             <SectionHeading label="Why 3QTR" title="Built Different" />
           </AnimatedSection>
@@ -372,8 +400,8 @@ const Home = () => {
 
       {/* Final CTA */}
       <section className="relative py-24 md:py-32 overflow-hidden">
-        <img src={teamHuddle} alt="" loading="lazy" width={1280} height={854} className="absolute inset-0 w-full h-full object-cover opacity-15" />
-        <div className="absolute inset-0 bg-card/90" />
+        <img src={athletesBanner2} alt="" loading="lazy" width={1920} height={640} className="absolute inset-0 w-full h-full object-cover opacity-20" />
+        <div className="absolute inset-0 bg-card/85" />
         <div className="relative z-10 container mx-auto px-6 text-center">
           <AnimatedSection>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto leading-tight">

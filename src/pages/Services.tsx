@@ -3,6 +3,8 @@ import { ArrowRight, Star } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import coachingSession from "@/assets/coaching-session.jpg";
+import athletesBanner1 from "@/assets/athletes-banner-1.jpg";
+import athletesGrid from "@/assets/athletes-grid.jpg";
 
 const services = [
   {
@@ -75,6 +77,12 @@ const Services = () => (
       </div>
     </section>
 
+    {/* Athlete Divider */}
+    <section className="relative h-48 md:h-56 overflow-hidden">
+      <img src={athletesBanner1} alt="Diverse athletes in action" loading="lazy" width={1920} height={640} className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
+    </section>
+
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-6">
         <div className="space-y-8 max-w-4xl mx-auto">
@@ -117,6 +125,17 @@ const Services = () => (
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Athletes Grid Accent */}
+        <AnimatedSection delay={0.2}>
+          <div className="relative h-48 md:h-64 rounded-sm overflow-hidden max-w-4xl mx-auto mt-16">
+            <img src={athletesGrid} alt="Diverse athletes across multiple sports" loading="lazy" width={1280} height={856} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 text-center">
+              <p className="text-lg font-display font-semibold text-white drop-shadow-lg">Every sport. Every athlete. One mission.</p>
+            </div>
+          </div>
+        </AnimatedSection>
 
         <AnimatedSection delay={0.3}>
           <div className="text-center mt-16">

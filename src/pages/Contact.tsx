@@ -3,6 +3,8 @@ import { Phone, Mail, Globe } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import { toast } from "sonner";
+import contactSports from "@/assets/contact-sports.jpg";
+import athletesBanner2 from "@/assets/athletes-banner-2.jpg";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", org: "", message: "" });
@@ -15,8 +17,11 @@ const Contact = () => {
 
   return (
     <main className="pt-20">
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6">
+      {/* Hero with athlete background */}
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <img src={contactSports} alt="" loading="lazy" width={1280} height={856} className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-background/85" />
+        <div className="relative z-10 container mx-auto px-6">
           <AnimatedSection>
             <SectionHeading
               label="Contact"
@@ -24,7 +29,17 @@ const Contact = () => {
               description="Ready to explore what 3QTR can do for your team? Reach out for a complimentary discovery call."
             />
           </AnimatedSection>
+        </div>
+      </section>
 
+      {/* Athletes Celebration Divider */}
+      <section className="relative h-40 md:h-52 overflow-hidden">
+        <img src={athletesBanner2} alt="Athletes celebrating together" loading="lazy" width={1920} height={640} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-transparent to-background/50" />
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 max-w-5xl mx-auto">
             <AnimatedSection className="lg:col-span-3">
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -111,6 +126,13 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Contact page sports image accent */}
+                <div className="relative rounded-sm overflow-hidden">
+                  <img src={contactSports} alt="Professional sports consulting" loading="lazy" width={1280} height={856} className="w-full h-48 object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
+                </div>
+
                 <div className="p-6 rounded-sm border border-primary/20 bg-primary/5">
                   <h4 className="font-display text-lg font-semibold text-primary mb-2">Free Discovery Call</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">
