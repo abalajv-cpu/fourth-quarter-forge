@@ -122,7 +122,6 @@ const Home = () => {
             </AnimatedSection>
           </div>
         </div>
-        </div>
       </section>
 
       {/* The 3QTR Solution */}
