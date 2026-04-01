@@ -109,13 +109,13 @@ const Home = () => {
               </AnimatedSection>
             </div>
             <AnimatedSection delay={0.3}>
-              <div className="space-y-4 h-full flex flex-col">
-                <div className="relative rounded-sm overflow-hidden flex-1">
-                  <img src={teamHuddle} alt="Team huddle showing the importance of team cohesion" loading="lazy" width={1280} height={854} className="w-full h-full min-h-[240px] object-cover object-center rounded-sm" />
+              <div className="space-y-4 h-full flex flex-col justify-between">
+                <div className="relative rounded-sm overflow-hidden">
+                  <img src={teamHuddle} alt="Team huddle showing the importance of team cohesion" loading="lazy" width={1280} height={854} className="w-full aspect-[16/10] object-cover object-center rounded-sm" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                 </div>
-                <div className="relative rounded-sm overflow-hidden flex-1">
-                  <img src={girlsSports} alt="Girls sports team showing unity and teamwork" loading="lazy" width={1280} height={854} className="w-full h-full min-h-[240px] object-cover object-top rounded-sm" />
+                <div className="relative rounded-sm overflow-hidden">
+                  <img src={girlsSports} alt="Girls sports team showing unity and teamwork" loading="lazy" width={1280} height={854} className="w-full aspect-[16/10] object-cover object-top rounded-sm" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                 </div>
               </div>
