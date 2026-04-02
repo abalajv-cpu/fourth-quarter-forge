@@ -9,6 +9,11 @@ import founderGreenShirt from "@/assets/founder-green-shirt.jpg";
 import coachingSession from "@/assets/coaching-session.jpg";
 import collegeAthletes from "@/assets/college-athletes.jpg";
 import teamUnity from "@/assets/team-unity.jpg";
+import aboutFootball from "@/assets/about-football.jpg";
+import aboutSoccer from "@/assets/about-soccer.jpg";
+import aboutTrack from "@/assets/about-track.jpg";
+import aboutVolleyball from "@/assets/about-volleyball.jpg";
+import aboutSwimming from "@/assets/about-swimming.jpg";
 
 const About = () => {
   const [assessModal, setAssessModal] = useState(false);
