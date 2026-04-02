@@ -135,6 +135,31 @@ const About = () => {
         </div>
       </section>
 
+      {/* College Athletics Gallery */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-6">
+          <AnimatedSection>
+            <SectionHeading label="Athletics" title="Where Performance Meets Purpose" description="3QTR works across college sports — building stronger teams through the power of human connection." />
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+            {[
+              { src: aboutFootball, alt: "College football athletes celebrating" },
+              { src: aboutSoccer, alt: "Women's college soccer in action" },
+              { src: aboutTrack, alt: "Diverse college track and field runners" },
+              { src: aboutVolleyball, alt: "College volleyball team celebrating" },
+              { src: aboutSwimming, alt: "College swimmers at the pool" },
+            ].map((img, i) => (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div className="relative overflow-hidden rounded-sm group aspect-[4/3]">
+                  <img src={img.src} alt={img.alt} loading="lazy" width={1024} height={768} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="relative py-16 md:py-24 overflow-hidden">
         <img src={teamUnity} alt="Athletes putting hands together in unity" loading="lazy" width={1920} height={1080} className="absolute inset-0 w-full h-full object-cover opacity-15" />
