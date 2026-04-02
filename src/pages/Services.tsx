@@ -85,7 +85,7 @@ const Services = () => (
 
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-6">
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-8 max-w-5xl mx-auto">
           {services.map((s, i) => (
             <AnimatedSection key={i} delay={i * 0.1}>
               <div className={`p-8 md:p-10 rounded-sm border ${s.featured ? "border-primary bg-primary/5 ring-1 ring-primary/20" : "border-border bg-card"} hover:border-primary/50 transition-colors`}>
