@@ -9,6 +9,11 @@ import founderGreenShirt from "@/assets/founder-green-shirt.jpg";
 import coachingSession from "@/assets/coaching-session.jpg";
 import collegeAthletes from "@/assets/college-athletes.jpg";
 import teamUnity from "@/assets/team-unity.jpg";
+import aboutFootball from "@/assets/about-football.jpg";
+import aboutSoccer from "@/assets/about-soccer.jpg";
+import aboutTrack from "@/assets/about-track.jpg";
+import aboutVolleyball from "@/assets/about-volleyball.jpg";
+import aboutSwimming from "@/assets/about-swimming.jpg";
 
 const About = () => {
   const [assessModal, setAssessModal] = useState(false);
@@ -127,6 +132,31 @@ const About = () => {
             <p className="mt-6 text-primary font-semibold">— Colette M. Hosie</p>
             <div className="gold-divider mt-8" />
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* College Athletics Gallery */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-6">
+          <AnimatedSection>
+            <SectionHeading label="Athletics" title="Where Performance Meets Purpose" description="3QTR works across college sports — building stronger teams through the power of human connection." />
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+            {[
+              { src: aboutFootball, alt: "College football athletes celebrating" },
+              { src: aboutSoccer, alt: "Women's college soccer in action" },
+              { src: aboutTrack, alt: "Diverse college track and field runners" },
+              { src: aboutVolleyball, alt: "College volleyball team celebrating" },
+              { src: aboutSwimming, alt: "College swimmers at the pool" },
+            ].map((img, i) => (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div className="relative overflow-hidden rounded-sm group aspect-[4/3]">
+                  <img src={img.src} alt={img.alt} loading="lazy" width={1024} height={768} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
