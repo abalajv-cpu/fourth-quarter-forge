@@ -12,6 +12,7 @@ const services = [
   {
     title: "Student-Athlete Profile",
     price: "Custom packages available",
+    assessments: "Indigo + DISC",
     image: serviceAthleteProfile,
     description: "A comprehensive behavioral and motivational profile for each athlete. Understand how they communicate, what drives them, and how they respond under pressure. Equip coaches with the insights to lead each individual more effectively.",
     features: [
