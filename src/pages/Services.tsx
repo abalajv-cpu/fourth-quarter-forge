@@ -24,7 +24,7 @@ const services = [
   {
     title: "Coaching Staff Development",
     price: "Custom packages available",
-    assessments: "DISC + EQ",
+    image: serviceCoachingStaff,
     description: "Elevate your coaching staff's ability to communicate, motivate, and lead. This program develops emotional intelligence and behavioral awareness across your entire coaching team.",
     features: [
       "DISC Behavioral Assessment for each coach",
