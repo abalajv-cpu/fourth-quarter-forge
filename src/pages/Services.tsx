@@ -38,6 +38,7 @@ const services = [
   {
     title: "The 3QTR Edge",
     price: "Custom packages available",
+    assessments: "Full Suite",
     image: service3qtrEdge,
     description: "Our flagship program — a comprehensive, season-long performance system that integrates athlete profiling, coaching development, team cohesion workshops, and ongoing strategic support.",
     features: [
