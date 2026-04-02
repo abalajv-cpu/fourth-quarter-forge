@@ -3,6 +3,10 @@ import { ArrowRight, Star } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import coachingSession from "@/assets/coaching-session.jpg";
+import serviceAthleteProfile from "@/assets/service-athlete-profile.jpg";
+import serviceCoachingStaff from "@/assets/service-coaching-staff.jpg";
+import service3qtrEdge from "@/assets/service-3qtr-edge.jpg";
+import serviceSeasonRetainer from "@/assets/service-season-retainer.jpg";
 
 const services = [
   {
