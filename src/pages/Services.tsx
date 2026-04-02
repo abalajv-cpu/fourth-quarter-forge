@@ -51,7 +51,7 @@ const services = [
   {
     title: "Season Retainer",
     price: "Custom packages available",
-    assessments: "Ongoing Support",
+    image: serviceSeasonRetainer,
     description: "Continuous strategic consulting throughout your competitive season. On-demand support for coaches, athletes, and parents — keeping your team aligned, motivated, and performing.",
     features: [
       "Monthly consulting sessions",
