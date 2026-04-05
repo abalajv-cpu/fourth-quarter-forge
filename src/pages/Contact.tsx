@@ -101,13 +101,13 @@ const Contact = () => {
                       <Phone size={20} className="text-primary shrink-0" />
                       <span>(203) 979-8702</span>
                     </a>
-                    <a href="mailto:chosie222@gmail.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
+                    <a href="mailto:Admin@3qtr.net" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors">
                       <Mail size={20} className="text-primary shrink-0" />
-                      <span>chosie222@gmail.com</span>
+                      <span>Admin@3qtr.net</span>
                     </a>
                     <div className="flex items-center gap-4 text-muted-foreground">
                       <Globe size={20} className="text-primary shrink-0" />
-                      <span>www.3qtr.com</span>
+                      <span>www.3qtr.net</span>
                     </div>
                   </div>
                 </div>
