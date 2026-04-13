@@ -39,6 +39,9 @@ const Footer = () => (
       <p className="text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} 3QTR. All rights reserved.
       </p>
+      <p className="text-center text-xs text-muted-foreground mt-2">
+        Created by Aurex Services
+      </p>
     </div>
   </footer>
 );
