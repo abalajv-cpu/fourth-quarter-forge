@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
+import nilFaqHero from "@/assets/nil-faq-hero.jpg";
 import {
   Accordion,
   AccordionContent,
@@ -46,7 +47,9 @@ const NilFaq = () => {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-secondary/30">
+      <section className="relative py-24 md:py-32 overflow-hidden">
+        <img src={nilFaqHero} alt="Athletes and coach reviewing strategy" width={1280} height={720} className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <div className="absolute inset-0 bg-background/85" />
         <div className="relative z-10 container mx-auto px-6">
           <AnimatedSection>
             <SectionHeading
