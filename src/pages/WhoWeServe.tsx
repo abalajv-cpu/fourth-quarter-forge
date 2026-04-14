@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Shield, Award, Users, Heart } from "lucide-react";
+import FaqSection from "@/components/FaqSection";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import studentAthletes from "@/assets/student-athletes.jpg";
@@ -119,6 +120,12 @@ const WhoWeServe = () => {
               </AnimatedSection>
             ))}
           </div>
+
+          {/* FAQ */}
+          <FaqSection faqs={[
+            { question: "With NIL money on the table, team culture is harder to protect. Can 3Qtr help with that?", answer: "Compensation disparity within a locker room is one of the fastest ways to fracture team cohesion. 3Qtr's DISC assessment maps the behavioral styles across your roster so you can see where tension is likely to surface before it does." },
+            { question: "How can 3Qtr help coaches retain talent in the transfer portal era?", answer: "Athletes leave programs when they feel unseen or disconnected from the coaching staff. The DISC + Indigo combination gives coaches a roadmap for how each athlete is wired — their communication preferences, what they need to feel valued, and where their ambitions are pointed." },
+          ]} />
 
           <AnimatedSection delay={0.3}>
             <div className="text-center mt-16">

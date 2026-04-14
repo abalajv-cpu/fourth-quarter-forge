@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
+import FaqSection from "@/components/FaqSection";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import coachingSession from "@/assets/coaching-session.jpg";
@@ -132,6 +133,12 @@ const Services = () => (
             </AnimatedSection>
           ))}
         </div>
+
+        {/* FAQ */}
+        <FaqSection faqs={[
+          { question: "Transfers are at an all-time high, partly because of NIL. How can 3Qtr help coaches retain talent?", answer: "Athletes leave programs when they feel unseen, misused, or disconnected from the coaching staff. The DISC + Indigo combination gives coaches a roadmap for how each athlete is wired — their communication preferences, what they need to feel valued, and where their ambitions are pointed." },
+          { question: "Some NIL deals create athletes who act like free agents inside the program. How do assessments help?", answer: "3Qtr's approach helps coaches understand the behavioral profile of an athlete who may be pulling away from team identity. The EQ assessment specifically surfaces how an athlete manages self-regulation and relationships under pressure, so coaches can lead proactively." },
+        ]} />
 
         <AnimatedSection delay={0.3}>
           <div className="text-center mt-16">
