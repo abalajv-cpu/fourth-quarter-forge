@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Award, ArrowRight, GraduationCap } from "lucide-react";
+import FaqSection from "@/components/FaqSection";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import ExpandableCredential from "@/components/ExpandableCredential";
@@ -185,6 +186,13 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* CTA */}
+      {/* FAQ */}
+      <FaqSection faqs={[
+        { question: "NIL means athletes are thinking about their personal brand earlier than ever. How does 3Qtr fit into that?", answer: "Brand is behavior. How an athlete shows up in practice, handles pressure, responds to criticism, communicates with teammates — that is the brand. 3Qtr's EQ assessment helps athletes develop the self-awareness and interpersonal skills that make them marketable beyond their sport." },
+        { question: "Recruits and their families are more sophisticated now. How does 3Qtr strengthen a program's recruiting pitch?", answer: "Today's recruits are asking: Will this coach develop me as a person, not just a player? Incorporating behavioral assessments into your player development model signals that your program invests in the science of performance — not just Xs and Os." },
+      ]} />
 
       {/* CTA */}
       <section className="py-24 md:py-32">
