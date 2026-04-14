@@ -6,6 +6,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import AssessmentModal from "@/components/AssessmentModal";
 import ExpandableCredential from "@/components/ExpandableCredential";
+import FaqSection from "@/components/FaqSection";
 import heroBg from "@/assets/hero-bg.jpg";
 import teamHuddle from "@/assets/team-huddle.jpg";
 import girlsSports from "@/assets/girls-sports.jpg";
@@ -369,6 +370,12 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <FaqSection faqs={[
+        { question: "NIL has changed what athletes are focused on. How does 3Qtr help coaches keep athletes locked in on performance?", answer: "NIL creates real external pressure — brand deals, social media obligations, agent conversations — all competing for an athlete's mental bandwidth. 3Qtr uses the Indigo assessment to help each athlete understand their personal motivators and values. When an athlete knows why they compete and what drives them at their core, outside noise becomes easier to manage." },
+        { question: "With NIL money on the table, team culture is harder to protect. Can 3Qtr help with that?", answer: "Compensation disparity within a locker room is one of the fastest ways to fracture team cohesion. 3Qtr's DISC assessment maps the behavioral styles across your roster so you can see where tension is likely to surface before it does. It also gives coaches and athletes a shared language to talk about roles, respect, and accountability." },
+      ]} />
 
       {/* Final CTA */}
       <section className="relative py-24 md:py-32 overflow-hidden">
