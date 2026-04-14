@@ -8,6 +8,7 @@ const navLinks = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/who-we-serve", label: "Who We Serve" },
+  { to: "/nil-faq", label: "NIL FAQ" },
   { to: "/contact", label: "Contact" },
 ];
 
