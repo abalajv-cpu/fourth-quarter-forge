@@ -30,7 +30,7 @@ const Footer = () => (
           <h4 className="font-display text-lg font-semibold text-foreground mb-4">Contact</h4>
           <div className="flex flex-col gap-3 text-sm text-muted-foreground">
             <a href="tel:2039798702" className="hover:text-primary transition-colors">(203) 979-8702</a>
-            <a href="mailto:Admin@3qtr.net" className="hover:text-primary transition-colors">Admin@3qtr.net</a>
+            <a href="mailto:Colette@3Qtr.net" className="hover:text-primary transition-colors">Colette@3Qtr.net</a>
             <span>www.3qtr.net</span>
           </div>
         </div>
