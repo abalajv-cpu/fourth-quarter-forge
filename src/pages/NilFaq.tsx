@@ -14,32 +14,32 @@ const faqs = [
   {
     question: "NIL has changed what athletes are focused on. How does 3Qtr help coaches keep athletes locked in on performance?",
     answer:
-      "NIL creates real external pressure — brand deals, social media obligations, agent conversations — all competing for an athlete's mental bandwidth. 3Qtr uses the Indigo assessment to help each athlete understand their personal motivators and values. When an athlete knows why they compete and what drives them at their core, outside noise becomes easier to manage. Coaches get a clearer picture of who needs anchoring — and how to have those conversations before distraction becomes a performance issue.",
+      "NIL has created real opportunity for student-athletes and real distraction. 3Qtr gives coaches a clear picture of what individually motivates each athlete, what fuels their commitment when the season gets hard and what pulls their focus when outside pressure builds. When coaches understand how each athlete is wired to communicate and respond under pressure, they can have more intentional conversations, set expectations that actually resonate, and reconnect athletes to their purpose when NIL noise starts competing with team goals. The coaches who figure out how to develop the whole athlete mentally, emotionally, and behaviorally are the ones who keep their programs competitive. 3Qtr gives them the tools to do exactly that.",
   },
   {
     question: "With NIL money on the table, team culture is harder to protect. Can 3Qtr help with that?",
     answer:
-      "Compensation disparity within a locker room is one of the fastest ways to fracture team cohesion — and coaches are navigating it in real time. 3Qtr's DISC assessment maps the behavioral styles across your roster so you can see where tension is likely to surface before it does. It also gives coaches and athletes a shared language to talk about roles, respect, and accountability — without it feeling like a culture lecture.",
+      "Culture does not break down because of NIL. It breaks down when coaches lose visibility into what is driving individual behavior inside the program. 3Qtr gives coaches the behavioral and motivational insight to spot disconnection early, address it directly, and build a culture where individual goals and team goals are not in conflict. When athletes understand how they and their teammates are wired, trust builds faster and the shared language needed to protect culture under pressure already exists. NIL changes the environment. It does not have to change the culture.",
   },
   {
     question: "NIL means athletes are thinking about their personal brand earlier than ever. How does 3Qtr fit into that?",
     answer:
-      "Brand is behavior. How an athlete shows up in practice, handles pressure, responds to criticism, communicates with teammates — that is the brand. 3Qtr's EQ assessment helps athletes understand their emotional intelligence profile so they can develop the self-awareness and interpersonal skills that make them marketable beyond their sport. Coaches who invest in this become known as developers of the whole athlete — which is a recruiting advantage in its own right.",
+      "Personal branding starts with self-awareness and most student-athletes do not have a clear picture of who they are beyond their sport. 3Qtr changes that. Our science-based assessment gives athletes a deep understanding of their behavioral style, motivators, and skills, which are the same qualities that define a compelling personal brand. Athletes who know what they stand for, how they communicate, and what drives them are better positioned to represent themselves authentically on and off the court or field. 3Qtr does not compete with NIL. It makes athletes more ready for it.",
   },
   {
     question: "Transfers are at an all-time high, partly because of NIL. How can 3Qtr help coaches retain talent?",
     answer:
-      "Athletes leave programs when they feel unseen, misused, or disconnected from the coaching staff. The DISC + Indigo combination gives coaches a roadmap for how each athlete is wired — their communication preferences, what they need to feel valued, and where their ambitions are pointed. When coaches speak to what actually drives an individual athlete, retention becomes a relationship, not a sales pitch.",
+      "Most athletes do not leave a program solely for money. They leave because they feel unseen, underdeveloped, or misaligned with the culture. 3Qtr helps coaches get ahead of that. When coaches understand what individually motivates each athlete and how they are wired to communicate and compete, they can develop each player with intention and have the kind of honest conversations that build loyalty. Athletes who feel understood and purposefully developed are far less likely to enter the portal. Retention starts with connection and connection starts with knowing your athletes beyond their stats.",
   },
   {
-    question: "Recruits and their families are more sophisticated now. How does 3Qtr strengthen a program's recruiting pitch?",
+    question: "Recruiters and their families are more sophisticated now. How does 3Qtr strengthen a program's recruiting pitch?",
     answer:
-      "Today's recruits are asking: Will this coach develop me as a person, not just a player? 3Qtr gives programs a tangible, credentialed answer to that question. Incorporating behavioral assessments into your player development model signals that your program invests in the science of performance — not just Xs and Os. That's a differentiator in a recruiting conversation, and it gives families confidence that their student-athlete will be understood and developed with intention.",
+      "Today's recruits and their families are evaluating more than facilities and win records. They want to know how a program develops athletes as people. 3Qtr gives coaches a concrete, science-based answer to that question. Being able to show recruits and their families that your program invests in behavioral development, emotional intelligence, and individual motivation signals that you are committed to the whole athlete. In a crowded recruiting landscape, that is a differentiator that resonates with the families making the final decision.",
   },
   {
     question: "Some NIL deals create athletes who act like free agents inside the program. How do assessments help with that?",
     answer:
-      "The athlete hasn't changed — their leverage has. 3Qtr's approach helps coaches understand the behavioral profile of an athlete who may be pulling away from team identity. The EQ assessment specifically surfaces how an athlete manages self-regulation and relationships under pressure. Once a coach understands the why behind that behavior, they can make a deliberate choice — re-engage the athlete with a targeted approach, or prepare the team for a potential transition. Either way, you're leading proactively, not reacting.",
+      "When an athlete starts operating like a free agent, it is usually a sign that their individual purpose has disconnected from the team's goals. 3Qtr helps coaches identify that disconnection before it becomes a locker room problem. Understanding what drives each athlete and how they respond to pressure and conflict gives coaches the insight to re-engage individuals with direct, purposeful conversations rather than broad team messaging that does not land. Accountability is easier to establish when coaches know exactly how each athlete is wired and can speak to what actually matters to them.",
   },
 ];
 

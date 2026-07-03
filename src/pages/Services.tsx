@@ -13,12 +13,10 @@ const services = [
   {
     title: "Student-Athlete Profile",
     price: "Custom packages available",
-    assessments: "Indigo + DISC",
     image: serviceAthleteProfile,
     description: "A comprehensive behavioral and motivational profile for each athlete. Understand how they communicate, what drives them, and how they respond under pressure. Equip coaches with the insights to lead each individual more effectively.",
     features: [
-      "Indigo Assessment (motivators, skills, behavioral style)",
-      "DISC Behavioral Profile",
+      "Science-based assessments delivering behavioral style and emotional intelligence insights for coaching staff alignment and growth.",
       "Personalized development report",
       "Coach consultation on athlete dynamics",
     ],
@@ -26,12 +24,11 @@ const services = [
   {
     title: "Coaching Staff Development",
     price: "Custom packages available",
-    assessments: "DISC + EQ",
     image: serviceCoachingStaff,
     description: "Elevate your coaching staff's ability to communicate, motivate, and lead. This program develops emotional intelligence and behavioral awareness across your entire coaching team.",
     features: [
-      "DISC Behavioral Assessment for each coach",
-      "EQ (Emotional Intelligence) Assessment",
+      "Behavioral Assessment for each coach",
+      "Emotional Quotient Assessment",
       "Team communication workshop",
       "Conflict resolution and leadership strategies",
     ],
@@ -39,12 +36,11 @@ const services = [
   {
     title: "The 3QTR Edge",
     price: "Custom packages available",
-    assessments: "Full Suite",
     image: service3qtrEdge,
-    description: "Our flagship program — a comprehensive, season-long performance system that integrates athlete profiling, coaching development, team cohesion workshops, and ongoing strategic support.",
+    description: "Our flagship program, a comprehensive, season-long performance system that integrates athlete profiling, coaching development, team cohesion workshops, and ongoing strategic support.",
     features: [
-      "Full athlete profiling (Indigo + DISC)",
-      "Coaching staff EQ + DISC development",
+      "Full athlete profiling (behavior, motivators, skills)",
+      "Coaching staff behavioral and Emotional Quotient profiling",
       "Team cohesion and communication workshops",
       "Leadership development for captains",
       "Mid-season and post-season performance reviews",
@@ -55,9 +51,8 @@ const services = [
   {
     title: "Season Retainer",
     price: "Custom packages available",
-    assessments: "Ongoing Support",
     image: serviceSeasonRetainer,
-    description: "Continuous strategic consulting throughout your competitive season. On-demand support for coaches, athletes, and parents — keeping your team aligned, motivated, and performing.",
+    description: "Continuous strategic consulting throughout your competitive season. On-demand support for coaches, athletes, and parents, keeping your team aligned, motivated, and performing.",
     features: [
       "Monthly consulting sessions",
       "On-demand coaching support",
@@ -103,18 +98,6 @@ const Services = () => (
                           </span>
                         )}
                         <h3 className="font-display text-2xl font-bold">{s.title}</h3>
-                        <div className="flex gap-2 mt-1">
-                          {s.assessments.split(" + ").map((a) => (
-                            <span
-                              key={a}
-                              className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-sm text-white ${
-                                a === "DISC" ? "bg-brand-disc" : a === "Indigo" ? "bg-brand-indigo" : "bg-brand-eq"
-                              }`}
-                            >
-                              {a}
-                            </span>
-                          ))}
-                        </div>
                       </div>
                       <span className="text-lg font-semibold text-primary whitespace-nowrap">{s.price}</span>
                     </div>
@@ -136,8 +119,8 @@ const Services = () => (
 
         {/* FAQ */}
         <FaqSection faqs={[
-          { question: "Transfers are at an all-time high, partly because of NIL. How can 3Qtr help coaches retain talent?", answer: "Athletes leave programs when they feel unseen, misused, or disconnected from the coaching staff. The DISC + Indigo combination gives coaches a roadmap for how each athlete is wired — their communication preferences, what they need to feel valued, and where their ambitions are pointed." },
-          { question: "Some NIL deals create athletes who act like free agents inside the program. How do assessments help?", answer: "3Qtr's approach helps coaches understand the behavioral profile of an athlete who may be pulling away from team identity. The EQ assessment specifically surfaces how an athlete manages self-regulation and relationships under pressure, so coaches can lead proactively." },
+          { question: "Transfers are at an all-time high, partly because of NIL. How can 3Qtr help coaches retain talent?", answer: "Most athletes do not leave a program solely for money. They leave because they feel unseen, underdeveloped, or misaligned with the culture. 3Qtr helps coaches get ahead of that. When coaches understand what individually motivates each athlete and how they are wired to communicate and compete, they can develop each player with intention and have the kind of honest conversations that build loyalty. Athletes who feel understood and purposefully developed are far less likely to enter the portal. Retention starts with connection and connection starts with knowing your athletes beyond their stats." },
+          { question: "Some NIL deals create athletes who act like free agents inside the program. How do assessments help with that?", answer: "When an athlete starts operating like a free agent, it is usually a sign that their individual purpose has disconnected from the team's goals. 3Qtr helps coaches identify that disconnection before it becomes a locker room problem. Understanding what drives each athlete and how they respond to pressure and conflict gives coaches the insight to re-engage individuals with direct, purposeful conversations rather than broad team messaging that does not land. Accountability is easier to establish when coaches know exactly how each athlete is wired and can speak to what actually matters to them." },
         ]} />
 
         <AnimatedSection delay={0.3}>

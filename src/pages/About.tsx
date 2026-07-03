@@ -51,13 +51,13 @@ const About = () => {
                 <h3 className="font-display text-2xl font-bold">Colette M. Hosie</h3>
                 <div className="gold-divider-left" />
                 <p className="text-muted-foreground leading-relaxed">
-                  Colette's journey began as a competitive athlete, where she experienced firsthand the power — and the gaps — of team dynamics. That early insight became a lifelong mission.
+                  Colette's journey began as a competitive athlete, where she experienced firsthand the power and the gaps of team dynamics. That early insight became a lifelong mission.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  With a background in engineering and 29 years of Fortune 500 executive leadership, Colette understands systems, strategy, and people. As an NCAA-certified AAU coach and Hall of Fame team member, she brings an unmatched perspective to sports performance.
+                  With a background in engineering and over 25 years of Fortune 500 executive leadership, Colette understands systems, strategy, and people. As an NCAA-certified AAU coach and Hall of Fame team member, she brings an unmatched perspective to sports performance.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  3QTR was born from the belief that the missing piece of team performance isn't physical or tactical — it's human. Communication, motivation, leadership, emotional intelligence, and cohesion are the factors that separate good teams from great ones.
+                  3QTR was born from the belief that the missing piece of team performance isn't physical or tactical. It's human. Communication, motivation, leadership, emotional intelligence, and cohesion are the factors that separate good teams from great ones.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
                   <ExpandableCredential
@@ -66,7 +66,7 @@ const About = () => {
                   />
                   <ExpandableCredential label="NCAA-Certified AAU Coach" />
                   <ExpandableCredential
-                    label="29-Year Fortune 500 Executive"
+                    label="25+ Year Fortune 500 Experience"
                     details={
                       <ul className="space-y-1">
                         <li>• Harley Davidson</li>
@@ -87,13 +87,15 @@ const About = () => {
                       </ul>
                     }
                   />
-                  <div className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border sm:col-span-2">
-                    <span className="text-sm font-medium">Triple-Certified:</span>
-                    <div className="flex gap-2">
-                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-indigo hover:opacity-80 transition-opacity cursor-pointer">Indigo</button>
-                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-disc hover:opacity-80 transition-opacity cursor-pointer">DISC</button>
-                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-eq hover:opacity-80 transition-opacity cursor-pointer">EQ</button>
-                    </div>
+                  <div className="p-3 rounded-sm bg-secondary/30 border border-border sm:col-span-2">
+                    <button onClick={() => setAssessModal(true)} className="text-left w-full cursor-pointer">
+                      <span className="text-sm font-medium block mb-2">Triple-Certified:</span>
+                      <ul className="space-y-1 text-sm text-muted-foreground">
+                        <li>• Certified Professional Behavioral Analyst</li>
+                        <li>• Certified Professional Motivators Analyst</li>
+                        <li>• Certified Emotional Quotient Analyst</li>
+                      </ul>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -106,16 +108,16 @@ const About = () => {
       <AssessmentModal isOpen={assessModal} onClose={() => setAssessModal(false)} title="Assessment Certifications">
         <div className="space-y-6">
           <div>
-            <h4 className="font-display text-lg font-semibold text-brand-indigo mb-2">Indigo</h4>
-            <p>A motivational assessment that uncovers why athletes and coaches do what they do. Indigo measures 12 driving forces that shape attitude, effort, and commitment — helping programs align individual purpose with team goals to unlock sustained motivation and reduce burnout.</p>
+            <h4 className="font-display text-lg font-semibold text-primary mb-2">Certified Professional Behavioral Analyst</h4>
+            <p>A behavioral assessment that reveals how individuals communicate, compete, and collaborate under pressure. It identifies four core behavioral styles, Dominance, Influence, Steadiness, and Conscientiousness, giving coaches and athletes a shared language for building trust, managing conflict, and performing when it matters most.</p>
           </div>
           <div>
-            <h4 className="font-display text-lg font-semibold text-brand-disc mb-2">DISC</h4>
-            <p>A behavioral assessment that reveals how individuals communicate, compete, and collaborate under pressure. DISC identifies four core behavioral styles — Dominance, Influence, Steadiness, and Conscientiousness — giving coaches and athletes a shared language for building trust, managing conflict, and performing when it matters most.</p>
+            <h4 className="font-display text-lg font-semibold text-primary mb-2">Certified Professional Motivators Analyst</h4>
+            <p>A motivational assessment that uncovers why athletes and coaches do what they do. It measures 12 driving forces that shape attitude, effort, and commitment, helping programs align individual purpose with team goals to unlock sustained motivation and reduce burnout.</p>
           </div>
           <div>
-            <h4 className="font-display text-lg font-semibold text-brand-eq mb-2">EQ (Emotional Intelligence)</h4>
-            <p>An assessment that measures an individual's ability to recognize, understand, and manage emotions — both their own and others'. For coaches and athletes alike, high EQ translates to better decision-making under pressure, stronger team chemistry, and the mental resilience to push through adversity.</p>
+            <h4 className="font-display text-lg font-semibold text-primary mb-2">Certified Emotional Quotient Analyst</h4>
+            <p>An assessment that measures an individual's ability to recognize, understand, and manage emotions, both their own and others'. For coaches and athletes alike, high emotional intelligence translates to better decision-making under pressure, stronger team chemistry, and the mental resilience to push through adversity.</p>
           </div>
         </div>
       </AssessmentModal>
@@ -128,7 +130,7 @@ const About = () => {
           <AnimatedSection>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-6 block">Philosophy</span>
             <blockquote className="font-display text-2xl md:text-3xl font-bold italic leading-relaxed text-foreground">
-              "Every team has untapped potential. The difference between winning and dominating lives in the human connections your team builds — on and off the field."
+              "Every team has untapped potential. The difference between winning and dominating lives in the human connections your team builds, on and off the field."
             </blockquote>
             <p className="mt-6 text-primary font-semibold">— Colette M. Hosie</p>
             <div className="gold-divider mt-8" />
@@ -140,7 +142,7 @@ const About = () => {
       <section className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-6">
           <AnimatedSection>
-            <SectionHeading label="Athletics" title="Where Performance Meets Purpose" description="3QTR works across college sports — building stronger teams through the power of human connection." />
+            <SectionHeading label="Athletics" title="Where Performance Meets Purpose" description="3QTR works across college sports, building stronger teams through the power of human connection." />
           </AnimatedSection>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
             {[
@@ -190,8 +192,8 @@ const About = () => {
       {/* CTA */}
       {/* FAQ */}
       <FaqSection faqs={[
-        { question: "NIL means athletes are thinking about their personal brand earlier than ever. How does 3Qtr fit into that?", answer: "Brand is behavior. How an athlete shows up in practice, handles pressure, responds to criticism, communicates with teammates — that is the brand. 3Qtr's EQ assessment helps athletes develop the self-awareness and interpersonal skills that make them marketable beyond their sport." },
-        { question: "Recruits and their families are more sophisticated now. How does 3Qtr strengthen a program's recruiting pitch?", answer: "Today's recruits are asking: Will this coach develop me as a person, not just a player? Incorporating behavioral assessments into your player development model signals that your program invests in the science of performance — not just Xs and Os." },
+        { question: "NIL means athletes are thinking about their personal brand earlier than ever. How does 3Qtr fit into that?", answer: "Personal branding starts with self-awareness and most student-athletes do not have a clear picture of who they are beyond their sport. 3Qtr changes that. Our science-based assessment gives athletes a deep understanding of their behavioral style, motivators, and skills, which are the same qualities that define a compelling personal brand. Athletes who know what they stand for, how they communicate, and what drives them are better positioned to represent themselves authentically on and off the court or field. 3Qtr does not compete with NIL. It makes athletes more ready for it." },
+        { question: "Recruiters and their families are more sophisticated now. How does 3Qtr strengthen a program's recruiting pitch?", answer: "Today's recruits and their families are evaluating more than facilities and win records. They want to know how a program develops athletes as people. 3Qtr gives coaches a concrete, science-based answer to that question. Being able to show recruits and their families that your program invests in behavioral development, emotional intelligence, and individual motivation signals that you are committed to the whole athlete. In a crowded recruiting landscape, that is a differentiator that resonates with the families making the final decision." },
       ]} />
 
       {/* CTA */}

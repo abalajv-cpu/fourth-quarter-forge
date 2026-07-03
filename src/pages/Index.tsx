@@ -73,7 +73,7 @@ const Home = () => {
             <SectionHeading
               label="The Gap"
               title="What Most Teams Are Missing"
-              description="Teams invest heavily in physical training and tactical preparation — but the human side of performance is often overlooked."
+              description="Teams invest heavily in physical training and tactical preparation, but the human side of performance is often overlooked."
             />
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
@@ -123,7 +123,7 @@ const Home = () => {
             <SectionHeading
               label="The Solution"
               title="The Missing Quarter"
-              description="3QTR bridges the gap between athletic talent and peak team performance. We use scientifically validated assessments to develop the human side of your team — so athletes and coaches perform better, together."
+              description="3QTR bridges the gap between athletic talent and peak team performance. We use scientifically validated assessments to develop the human side of your team, so athletes and coaches perform better, together."
             />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
@@ -132,7 +132,7 @@ const Home = () => {
                 {
                   icon: Brain,
                   title: "Assess",
-                  desc: "DISC, Indigo & EQ assessments reveal each individual's strengths and growth areas.",
+                  desc: "3Qtr uses science-based assessments to reveal the behavioral style, skills, motivators, and emotional intelligence behind every athlete's and coach's next level.",
                   onClick: () => setAssessModal(true),
                 },
                 {
@@ -172,37 +172,40 @@ const Home = () => {
       <AssessmentModal isOpen={assessModal} onClose={() => setAssessModal(false)} title="Assess: The Foundation">
         <div className="space-y-6">
           <div>
-            <h4 className="font-display text-lg font-semibold text-brand-indigo mb-2">Indigo</h4>
-            <p>A motivational assessment that uncovers why athletes and coaches do what they do. Indigo measures 12 driving forces that shape attitude, effort, and commitment — helping programs align individual purpose with team goals to unlock sustained motivation and reduce burnout.</p>
+            <h4 className="font-display text-lg font-semibold text-primary mb-2">Athlete</h4>
+            <p className="font-semibold text-foreground mb-1">Behavioral &amp; Motivational Assessment</p>
+            <p>A comprehensive assessment that uncovers how athletes behave and why they do what they do. It measures four core behavioral styles alongside 12 driving forces that shape attitude, effort, and commitment. Together, these insights give athletes a deeper self-awareness and a roadmap for building trust, managing conflict, and aligning personal purpose with team goals, sustaining motivation, reducing burnout, and unlocking performance when it matters most.</p>
           </div>
           <div>
-            <h4 className="font-display text-lg font-semibold text-brand-disc mb-2">DISC</h4>
-            <p>A behavioral assessment that reveals how individuals communicate, compete, and collaborate under pressure. DISC identifies four core behavioral styles — Dominance, Influence, Steadiness, and Conscientiousness — giving coaches and athletes a shared language for building trust, managing conflict, and performing when it matters most.</p>
-          </div>
-          <div>
-            <h4 className="font-display text-lg font-semibold text-brand-eq mb-2">EQ (Emotional Intelligence)</h4>
-            <p>An assessment that measures an individual's ability to recognize, understand, and manage emotions — both their own and others'. For coaches and athletes alike, high EQ translates to better decision-making under pressure, stronger team chemistry, and the mental resilience to push through adversity.</p>
+            <h4 className="font-display text-lg font-semibold text-primary mb-2">Coaches</h4>
+            <p className="font-semibold text-foreground mb-1">Behavioral Style Assessment</p>
+            <p className="mb-4">A behavioral assessment that reveals how coaches communicate, compete, and collaborate under pressure. It identifies four core behavioral styles, Dominance, Influence, Steadiness, and Conscientiousness, giving coaches a shared language for building trust, managing conflict, and performing when it matters most.</p>
+            <p className="font-semibold text-foreground mb-1">Emotional Intelligence Assessment</p>
+            <p>An assessment that measures a coach's ability to recognize, understand, and manage emotions, both their own and others'. High emotional intelligence translates to better decision-making under pressure, stronger team chemistry, and the mental resilience to lead through adversity.</p>
           </div>
         </div>
       </AssessmentModal>
 
       {/* Develop Modal */}
       <AssessmentModal isOpen={developModal} onClose={() => setDevelopModal(false)} title="Develop: Turning Insight into Action">
-        <p>Most programs invest heavily in physical training and game film, but leave the mental and behavioral side of performance to chance.</p>
-        <p><strong className="text-brand-indigo">Indigo</strong> reveals what truly motivates each student-athlete — what fuels their drive to push through adversity or causes them to quietly disengage when the pressure mounts. That self-knowledge doesn't stop at the final buzzer; it follows student-athletes into the classroom, their careers, and every competitive environment they will face in life.</p>
-        <p><strong className="text-brand-disc">DISC</strong> shows coaches how each athlete is wired to communicate and compete, so they can be coached in the way that actually lands.</p>
-        <p><strong className="text-brand-eq">EQ</strong> identifies each athlete's capacity to handle pressure, conflict, and team dynamics with the maturity that separates good competitors from great ones.</p>
-        <p>Used together, these tools give student-athletes the self-awareness to become the competitor and teammate their team needs them to be — and give coaches the insight to develop each individual with purpose and precision.</p>
+        <p>Most programs invest heavily in physical training and game film but leave the mental and behavioral side of performance to chance.</p>
+        <h4 className="font-display text-lg font-semibold text-primary">Athletes</h4>
+        <p>Our comprehensive athlete assessment reveals what truly drives each student-athlete, measuring behavioral style, 12 driving forces, and skills that shape attitude, effort, and commitment. It uncovers what fuels their push through adversity or causes them to quietly disengage when pressure mounts. That self-knowledge doesn't stop at the final buzzer; it follows student-athletes into the classroom, their careers, and every competitive environment they will face in life.</p>
+        <p>Used with intention, this tool gives student-athletes the self-awareness to become the competitor and teammate their team needs them to be.</p>
+        <h4 className="font-display text-lg font-semibold text-primary">Coaches</h4>
+        <p>Great coaching requires more than strategy. It requires knowing how to reach each individual and lead with consistency under pressure.</p>
+        <p>Our behavioral style assessment shows coaches how each athlete is wired to communicate and compete, so they can be coached in the way that lands. Our emotional intelligence assessment identifies each coach's capacity to handle pressure, conflict, and team dynamics with the maturity that separates good coaches from great ones.</p>
+        <p>Used together, these two assessments give coaches the insight to develop each individual with purpose and precision, and the self-awareness to lead a team that performs when it matters most.</p>
       </AssessmentModal>
 
       {/* Perform Modal */}
       <AssessmentModal isOpen={performModal} onClose={() => setPerformModal(false)} title="Perform: Where It All Comes Together">
-        <p>Championships are not won on talent alone. The teams that consistently win are the ones that know how to communicate under pressure, stay motivated through a grueling season, and manage the emotional weight of competition without fracturing.</p>
-        <p><strong className="text-brand-indigo">Indigo</strong>, <strong className="text-brand-disc">DISC</strong>, and <strong className="text-brand-eq">EQ</strong> assessments give programs the behavioral intelligence to do exactly that.</p>
-        <p>When coaches understand what drives each player, they stop coaching to the group and start developing individuals — and individual development is what moves the scoreboard.</p>
+        <p>Championships are not won on talent alone. The teams that consistently win know how to communicate under pressure, stay motivated through a grueling season, and manage the emotional weight of competition without fracturing.</p>
+        <p>Science-based assessments measuring behavioral style, motivators, skills, and emotional intelligence give programs the behavioral intelligence to do exactly that.</p>
+        <p>When coaches understand what drives each player, they stop coaching to the group and start developing individuals. Individual development is what moves the scoreboard.</p>
         <p>When every athlete understands how they and their teammates are wired, communication sharpens, trust builds faster, and conflict gets resolved before it becomes a locker room problem.</p>
-        <p>When the emotional discipline to perform in pressure moments, bounce back from defeat, and lead when the team needs it most is developed, winning becomes a culture — not a coincidence.</p>
-        <p>These assessments do not replace hard work or great coaching. They make both more effective.</p>
+        <p>When emotional discipline is developed, performing in pressure moments, bouncing back from defeat, and leading when the team needs it most becomes a culture not a coincidence.</p>
+        <p>These tools do not replace hard work or great coaching. They make both more effective.</p>
       </AssessmentModal>
 
       {/* Founder Preview */}
@@ -220,7 +223,7 @@ const Home = () => {
                 <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Colette M. Hosie</h2>
                 <div className="gold-divider-left mb-6" />
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  A unique combination of athlete, engineer, and executive leader. With 29 years in Fortune 500 leadership, NCAA-certified AAU coaching experience, and triple certification in DISC, Indigo, and EQ — Colette brings a rare perspective to sports performance development.
+                  A unique combination of athlete, engineer, and executive leader. With more than 25 years in Fortune 500 leadership, NCAA-certified AAU coaching experience, and triple certification as a Certified Professional Behavioral Analyst, Certified Professional Motivators Analyst, and Certified Emotional Quotient Analyst, Colette brings a rare perspective to sports performance development.
                 </p>
                 <Link to="/about" className="inline-flex items-center gap-2 text-sm font-semibold text-primary uppercase tracking-wider hover:gap-3 transition-all">
                   Read Full Bio <ArrowRight size={16} />
@@ -232,7 +235,7 @@ const Home = () => {
                   />
                   <ExpandableCredential label="NCAA-Certified AAU Coach" />
                   <ExpandableCredential
-                    label="29-Year Fortune 500 Executive"
+                    label="25+ years Fortune 500 experience"
                     details={
                       <ul className="space-y-1">
                         <li>• Harley Davidson</li>
@@ -253,13 +256,13 @@ const Home = () => {
                       </ul>
                     }
                   />
-                  <div className="flex items-center gap-3 p-3 rounded-sm bg-secondary/30 border border-border">
-                    <span className="text-sm font-medium">Triple-Certified:</span>
-                    <div className="flex gap-2">
-                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-indigo hover:opacity-80 transition-opacity cursor-pointer">Indigo</button>
-                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-disc hover:opacity-80 transition-opacity cursor-pointer">DISC</button>
-                      <button onClick={() => setAssessModal(true)} className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-sm text-white bg-brand-eq hover:opacity-80 transition-opacity cursor-pointer">EQ</button>
-                    </div>
+                  <div className="p-3 rounded-sm bg-secondary/30 border border-border">
+                    <span className="text-sm font-medium block mb-2">Triple-Certified:</span>
+                    <ul className="space-y-1 text-sm text-muted-foreground">
+                      <li>• Certified Professional Behavioral Analyst</li>
+                      <li>• Certified Professional Motivators Analyst</li>
+                      <li>• Certified Emotional Quotient Analyst</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -280,8 +283,8 @@ const Home = () => {
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              { title: "Student-Athlete Profile", price: "Custom packages available", desc: "Indigo + DISC assessments for individual athlete development." },
-              { title: "Coaching Staff Development", price: "Custom packages available", desc: "DISC + EQ programs for coaching staff alignment and growth." },
+              { title: "Student-Athlete Profile", price: "Custom packages available", desc: "A science-based assessment delivering behavioral style, motivators, and skills insights for individual athlete development." },
+              { title: "Coaching Staff Development", price: "Custom packages available", desc: "Science-based assessments delivering behavioral style and emotional intelligence insights for coaching staff alignment and growth." },
               { title: "The 3QTR Edge", price: "Custom packages available", desc: "Our flagship comprehensive team performance program.", featured: true },
               { title: "Season Retainer", price: "Custom packages available", desc: "Ongoing strategic support throughout your competitive season." },
             ].map((s, i) => (
@@ -373,8 +376,8 @@ const Home = () => {
 
       {/* FAQ */}
       <FaqSection faqs={[
-        { question: "NIL has changed what athletes are focused on. How does 3Qtr help coaches keep athletes locked in on performance?", answer: "NIL creates real external pressure — brand deals, social media obligations, agent conversations — all competing for an athlete's mental bandwidth. 3Qtr uses the Indigo assessment to help each athlete understand their personal motivators and values. When an athlete knows why they compete and what drives them at their core, outside noise becomes easier to manage." },
-        { question: "With NIL money on the table, team culture is harder to protect. Can 3Qtr help with that?", answer: "Compensation disparity within a locker room is one of the fastest ways to fracture team cohesion. 3Qtr's DISC assessment maps the behavioral styles across your roster so you can see where tension is likely to surface before it does. It also gives coaches and athletes a shared language to talk about roles, respect, and accountability." },
+        { question: "NIL has changed what athletes are focused on. How does 3Qtr help coaches keep athletes locked in on performance?", answer: "NIL has created real opportunity for student-athletes and real distraction. 3Qtr gives coaches a clear picture of what individually motivates each athlete, what fuels their commitment when the season gets hard and what pulls their focus when outside pressure builds. When coaches understand how each athlete is wired to communicate and respond under pressure, they can have more intentional conversations, set expectations that actually resonate, and reconnect athletes to their purpose when NIL noise starts competing with team goals. The coaches who figure out how to develop the whole athlete mentally, emotionally, and behaviorally are the ones who keep their programs competitive. 3Qtr gives them the tools to do exactly that." },
+        { question: "With NIL money on the table, team culture is harder to protect. Can 3Qtr help with that?", answer: "Culture does not break down because of NIL. It breaks down when coaches lose visibility into what is driving individual behavior inside the program. 3Qtr gives coaches the behavioral and motivational insight to spot disconnection early, address it directly, and build a culture where individual goals and team goals are not in conflict. When athletes understand how they and their teammates are wired, trust builds faster and the shared language needed to protect culture under pressure already exists. NIL changes the environment. It does not have to change the culture." },
       ]} />
 
       {/* Final CTA */}
