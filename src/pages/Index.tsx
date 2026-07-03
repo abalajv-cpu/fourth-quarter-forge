@@ -158,7 +158,7 @@ const Home = () => {
                   </div>
                   <h3 className="font-display text-xl font-semibold mb-3">{s.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed text-balance flex-1">{s.desc}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary uppercase tracking-wider">
+                  <span className="mt-4 flex items-center justify-center gap-1 text-xs font-semibold text-primary uppercase tracking-wider">
                     Learn More <ArrowRight size={12} />
                   </span>
                 </button>
