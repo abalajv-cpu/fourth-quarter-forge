@@ -127,7 +127,7 @@ const Home = () => {
             />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto items-stretch">
               {[
                 {
                   icon: Brain,
@@ -151,13 +151,13 @@ const Home = () => {
                 <button
                   key={i}
                   onClick={s.onClick}
-                  className="text-center p-8 bg-card/50 backdrop-blur-sm rounded-sm border border-border/50 hover:border-primary/50 hover:bg-card/80 transition-all cursor-pointer group"
+                  className="text-center p-8 bg-card/50 backdrop-blur-sm rounded-sm border border-border/50 hover:border-primary/50 hover:bg-card/80 transition-all cursor-pointer group flex flex-col h-full"
                 >
                   <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <s.icon size={24} className="text-primary" />
                   </div>
                   <h3 className="font-display text-xl font-semibold mb-3">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-balance flex-1">{s.desc}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-primary uppercase tracking-wider">
                     Learn More <ArrowRight size={12} />
                   </span>
