@@ -123,7 +123,7 @@ const WhoWeServe = () => {
 
           {/* FAQ */}
           <FaqSection faqs={[
-            { question: "With NIL money on the table, team culture is harder to protect. Can 3Qtr help with that?", answer: "Compensation disparity within a locker room is one of the fastest ways to fracture team cohesion. 3Qtr's DISC assessment maps the behavioral styles across your roster so you can see where tension is likely to surface before it does." },
+            { question: "With NIL money on the table, team culture is harder to protect. Can 3Qtr help with that?", answer: "Compensation disparity within a locker room is one of the fastest ways to fracture team cohesion. 3Qtr's behavioral assessment maps the behavioral styles across your roster so you can see where tension is likely to surface before it does." },
             { question: "How can 3Qtr help coaches retain talent in the transfer portal era?", answer: "Athletes leave programs when they feel unseen or disconnected from the coaching staff. 3Qtr gives coaches a roadmap for how each athlete is wired, their communication preferences, what they need to feel valued, and where their ambitions are pointed." },
           ]} />
 
