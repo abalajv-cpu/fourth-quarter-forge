@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoAsset from "@/assets/3qtr-logo.png.asset.json";
 
 const Footer = () => (
   <footer className="bg-card border-t border-border">
