@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="container mx-auto px-6 py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div>
-          <h3 className="font-display text-2xl font-bold text-primary mb-4">3QTR</h3>
+          <img src={logoAsset.url} alt="3QTR" className="h-16 w-auto mb-4" />
           <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
             Unlocking the 4th Quarter of Human Performance through assessment-based development for competitive sports teams.
           </p>
