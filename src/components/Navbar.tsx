@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoAsset from "@/assets/3qtr-logo.png.asset.json";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -19,8 +20,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-20 px-6">
-        <Link to="/" className="font-display text-2xl font-bold tracking-wider text-primary">
-          3QTR
+        <Link to="/" className="flex items-center">
+          <img src={logoAsset.url} alt="3QTR" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop */}
