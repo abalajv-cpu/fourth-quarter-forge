@@ -13,12 +13,10 @@ const services = [
   {
     title: "Student-Athlete Profile",
     price: "Custom packages available",
-    assessments: "Indigo + DISC",
     image: serviceAthleteProfile,
     description: "A comprehensive behavioral and motivational profile for each athlete. Understand how they communicate, what drives them, and how they respond under pressure. Equip coaches with the insights to lead each individual more effectively.",
     features: [
-      "Indigo Assessment (motivators, skills, behavioral style)",
-      "DISC Behavioral Profile",
+      "Science-based assessments delivering behavioral style and emotional intelligence insights for coaching staff alignment and growth.",
       "Personalized development report",
       "Coach consultation on athlete dynamics",
     ],
@@ -26,12 +24,11 @@ const services = [
   {
     title: "Coaching Staff Development",
     price: "Custom packages available",
-    assessments: "DISC + EQ",
     image: serviceCoachingStaff,
     description: "Elevate your coaching staff's ability to communicate, motivate, and lead. This program develops emotional intelligence and behavioral awareness across your entire coaching team.",
     features: [
-      "DISC Behavioral Assessment for each coach",
-      "EQ (Emotional Intelligence) Assessment",
+      "Behavioral Assessment for each coach",
+      "Emotional Quotient Assessment",
       "Team communication workshop",
       "Conflict resolution and leadership strategies",
     ],
@@ -39,12 +36,11 @@ const services = [
   {
     title: "The 3QTR Edge",
     price: "Custom packages available",
-    assessments: "Full Suite",
     image: service3qtrEdge,
-    description: "Our flagship program — a comprehensive, season-long performance system that integrates athlete profiling, coaching development, team cohesion workshops, and ongoing strategic support.",
+    description: "Our flagship program, a comprehensive, season-long performance system that integrates athlete profiling, coaching development, team cohesion workshops, and ongoing strategic support.",
     features: [
-      "Full athlete profiling (Indigo + DISC)",
-      "Coaching staff EQ + DISC development",
+      "Full athlete profiling (behavior, motivators, skills)",
+      "Coaching staff behavioral and Emotional Quotient profiling",
       "Team cohesion and communication workshops",
       "Leadership development for captains",
       "Mid-season and post-season performance reviews",
@@ -55,9 +51,8 @@ const services = [
   {
     title: "Season Retainer",
     price: "Custom packages available",
-    assessments: "Ongoing Support",
     image: serviceSeasonRetainer,
-    description: "Continuous strategic consulting throughout your competitive season. On-demand support for coaches, athletes, and parents — keeping your team aligned, motivated, and performing.",
+    description: "Continuous strategic consulting throughout your competitive season. On-demand support for coaches, athletes, and parents, keeping your team aligned, motivated, and performing.",
     features: [
       "Monthly consulting sessions",
       "On-demand coaching support",
