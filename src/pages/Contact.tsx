@@ -3,12 +3,27 @@ import { Phone, Mail, Globe } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", org: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    const { error } = await supabase.from("contact_submissions").insert({
+      name: form.name.trim(),
+      email: form.email.trim(),
+      phone: form.phone.trim() || null,
+      org: form.org.trim() || null,
+      message: form.message.trim(),
+    });
+    setSubmitting(false);
+    if (error) {
+      toast.error("Something went wrong. Please try again or email us directly.");
+      return;
+    }
     toast.success("Thank you! We'll be in touch shortly.");
     setForm({ name: "", email: "", phone: "", org: "", message: "" });
   };
