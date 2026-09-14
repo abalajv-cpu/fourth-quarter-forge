@@ -99,9 +99,10 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-10 py-4 text-sm font-semibold bg-gold-gradient text-primary-foreground rounded-sm uppercase tracking-wider hover:opacity-90 transition-opacity"
+                  disabled={submitting}
+                  className="w-full sm:w-auto px-10 py-4 text-sm font-semibold bg-gold-gradient text-primary-foreground rounded-sm uppercase tracking-wider hover:opacity-90 transition-opacity disabled:opacity-60"
                 >
-                  Send Message
+                  {submitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </AnimatedSection>
